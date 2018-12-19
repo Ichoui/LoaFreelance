@@ -49,8 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+/*/ Route obligation*/
+// welcome = notlogged/index, nom de base inchangé.
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
+// Route customs
+// NotLogged
 $route['notlogged/login'] =  'notlogged/login';
+$route['notlogged/registration'] =  'notlogged/registration';
+
+$route['dashboard'] =  'dashboard';
+$route['payment'] =  'payment';
+$route['messages'] =  'messages';
+$route['profile'] =  'profile';
+$route['projects'] =  'projects';
