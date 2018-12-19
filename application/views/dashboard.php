@@ -2,7 +2,7 @@
 <?php $this->load->view('shared/menubar'); ?>
 
 <body style="overflow: hidden;">
-<main class="page landing-page dashboard">
+<main class="page dashboard">
 	<section class="clean-block clean-hero">
 		<div class="text">
 			<h1 class="text-center" style="font-size: 44px;">Postuler à des projets</h1>

@@ -1,7 +1,7 @@
 <?php $this->load->view('shared/header'); ?>
 <?php $this->load->view('shared/menubar'); ?>
 
-<main class="page landing-page">
+<main class="page profile">
     <div class="container profile">
         <img style="border: 1px solid black;">
         <div class="identity">
