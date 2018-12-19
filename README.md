@@ -1,6 +1,8 @@
 ### Installation
 
 ``npm i`` => Installe les dépendances 
+<br> Si ne fonctionne pas :
+``npm i --save gulp@3.9.1 bootstrap-sass gulp-sass gulp-sourcemaps``
 
 ### Lancer le front
 
@@ -9,3 +11,4 @@
 ``application``  Contient le projet
 
 ``application/views``  Contient toutes les assets (js, images, css et scss)
+

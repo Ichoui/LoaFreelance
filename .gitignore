@@ -58,3 +58,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+#--------
+Project :
+
+/css/*.css
+config.php
