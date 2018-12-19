@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*/ Route obligation*/
 // welcome = notlogged/index, nom de base inchangé.
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -60,6 +60,8 @@ $route['translate_uri_dashes'] = FALSE;
 // Route customs
 // NotLogged
 $route['notlogged/login'] =  'notlogged/login';
+$route['/'] =  'home';
+
 $route['notlogged/registration'] =  'notlogged/registration';
 
 $route['dashboard'] =  'dashboard';

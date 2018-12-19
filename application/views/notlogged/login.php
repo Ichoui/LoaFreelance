@@ -1,5 +1,5 @@
 <?php $this->load->view('shared/header'); ?>
-<?php $this->load->view('shared/menubar_notlogged', $place); ?>
+<?php $this->load->view('shared/menu_notlogged', $place); ?>
 
 <main class="page login-page">
 	<section class="clean-block clean-form dark">
