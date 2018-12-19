@@ -7,6 +7,7 @@ class Login extends CI_Controller
 	public function index()
 	{
 		$this->load->helper('url');
-		$this->load->view('notlogged/login');
+		$data['place'] = 'login';
+		$this->load->view('notlogged/login', $data);
 	}
 }

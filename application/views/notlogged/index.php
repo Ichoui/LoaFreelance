@@ -1,5 +1,5 @@
 <?php $this->load->view('shared/header');?>
-<?php $this->load->view('shared/menubar_notlogged', $test = 'aeaz');?>
+<?php $this->load->view('shared/menubar_notlogged', $place);?>
 
 <main class="page landing-page index">
     <section class="clean-block clean-hero"

@@ -22,8 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url');
 //		$data['place'] = 'index';
-		$data['page_title'] = 'Your title';
+		$data['place'] = 'index';
 
-		$this->load->view('notlogged/index');
+		$this->load->view('notlogged/index', $data);
 	}
 }

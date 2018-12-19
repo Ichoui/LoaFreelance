@@ -1,5 +1,5 @@
 <?php $this->load->view('shared/header');?>
-<?php $this->load->view('shared/menubar_notlogged', 'registration');?>
+<?php $this->load->view('shared/menubar_notlogged', $place);?>
 
 <main class="page registration-page">
     <section class="clean-block clean-form dark">
