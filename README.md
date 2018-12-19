@@ -12,3 +12,8 @@
 
 ``application/views``  Contient toutes les assets (js, images, css et scss)
 
+### Config
+Le fichier application/config/<b>config.php</b> <u>n'est pas gitté</u>.<br>
+Un fichier "template" application/config/c<b>onfig-default.php</b>	 est présent pour faire suivre les informations. <br>
+Lorsqu'on effectue une modification sur notre config.php local, <u>ON DOIT</u> faire la modification dans <b>config-default.php</b>	.
+

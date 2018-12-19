@@ -6,15 +6,12 @@
 		<div class="collapse navbar-collapse"
 			 id="navcol-1">
 			<ul class="nav navbar-nav ml-auto">
-				<!--				 SI REGISTRATION -->
 				<?php if ($place === 'registration'): ?>
-					<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('login') ?>">RETOUR</a></li>
-					<!--				 SI LOGIN -->
+					<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/') ?>">RETOUR</a></li>
 				<?php elseif ($place === 'login'): ?>
-					<li class="nav-item" role="presentation"><a class="nav-link" href="index.html">RETOUR</a></li>
-					<!--				 SI INDEX-->
+					<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/') ?>">RETOUR</a></li>
 				<?php elseif ($place === 'index'): ?>
-					<li class="nav-item" role="presentation"><a class="nav-link" href="login.php">CONNEXION</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('login') ?>">CONNEXION</a></li>
 				<?php endif; ?>
 			</ul>
 		</div>

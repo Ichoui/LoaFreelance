@@ -4,11 +4,11 @@
 		<div class="collapse navbar-collapse"
 			 id="navcol-1">
 			<ul class="nav navbar-nav ml-auto">
-				<li class="nav-item" role="presentation"><a class="nav-link" href="profile.html">Profil</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link" href="projects.html">Projets</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link" href="messagerie.html">Messagerie</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link" href="notlogged/index.html">DECONNEXION</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link active" href="dashboard.html">Tableau de bord</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link active" href="<?= base_url('dashboard') ?>">Tableau de bord</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('profile') ?>">Profil</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('projects') ?>">Projets</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('messages') ?>">Messagerie</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/') ?>">DECONNEXION</a></li>
 			</ul>
 		</div>
 	</div>
