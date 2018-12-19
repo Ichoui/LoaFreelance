@@ -1,17 +1,17 @@
 <?php $this->load->view('shared/header'); ?>
-<?php $this->load->view('shared/menubar'); ?>
+<?php $this->load->view('shared/menu'); ?>
 
 <main class="page profile">
-    <div class="container profile">
-        <img style="border: 1px solid black;">
-        <div class="identity">
-            <p>Prénom : {prenom}</p>
-            <p>Nom : {nom}</p>
-        </div>
-        <div class="identity">
-            <p>Tarif horaire : {tarif}</p>
-        </div>
-    </div>
+	<section class="left">
+		<img src="http://api.ichoui.fr/maple/IMG_7293.JPG">
+	</section>
+	<section class="right">
+		<div class="identity">
+			<p class="prenom">Prénom : {google.prenom}</p>
+			<p class="nom">Nom : {google.nom}</p>
+			<p class="tarif">Tarif horaire : {user.tarif}</p>
+		</div>
+	</section>
 </main>
 
-<?php $this->load->view('shared/footer');?>
+<?php $this->load->view('shared/footer'); ?>

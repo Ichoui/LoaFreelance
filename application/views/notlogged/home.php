@@ -2,23 +2,21 @@
 <?php $this->load->view('shared/menu_notlogged', $place); ?>
 
 <main class="page landing-page index">
-	<section class="clean-block clean-hero"
-	>
-		<div class="text" style="color: black;">
-			<h1 class="text-center" style="font-size: 44px;">Bienvenue sur la plateforme<br>Freelancer.com</h1>
+	<section class="clean-block clean-hero">
+		<div class="text-center">
+			<h1 style="font-weight: bold">Bienvenue sur la plateforme<br>Freelancer.com</h1>
 			<p><br>Ce site web regroupe la majorité des freelances de France.&nbsp;<br>Que vous soyez Freelance dans l'informatique, la cuisine, le graphisme, tous les Freelances Français
 				sont regroupés sur ce site.<br><br></p>
-			<p>Vous cherchez un projet en tant que Freelance ?&nbsp;<br>Vous êtes une entreprise et cherchez un Freelance ?<br>Inscrivez-vous sur Freelancer.com !</p><a
-				class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('registration') ?>" style="background-color: #fc8c14;color: #eeeeee;">Rejoignez-nous !</a></div>
+			<p>Vous cherchez un projet en tant que Freelance ?&nbsp;<br>Vous êtes une entreprise et cherchez un Freelance ?<br>Inscrivez-vous sur <span class="frl">Freelancer.com</span> !
+			</p><a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('registration') ?>">Rejoignez-nous !</a></div>
 	</section>
-	<section class="clean-block clean-hero"
-			 style="/*background-image: url(&quot;../assets/img/dashboard.jpg?h=c37eb1ae60f21efc150ef3269e5983bf&quot;);*/color: rgba(0, 0, 0, 0.5);background-position: center;height: 100vh;opacity: 1;filter: blur(0px);">
+	<section class="clean-block clean-hero">
 		<div class="text" style="color: black;">
 			<p class="text-left" style="margin: 100px 0;">Vous avez un projet, une idée, mais vous n'avez ni les compétences, ni les ressources humaines nécessaires ? En vous inscrivant sur
-				<span>Freelancer.com</span>, vous pourrez naviguer parmis plusieurs profils de freelanceurs compétents.&nbsp;</p>
+				<span class="frl">Freelancer.com</span>, vous pourrez naviguer parmis plusieurs profils de freelanceurs compétents.&nbsp;</p>
 			<p class="text-right"
 			   style="margin: 100px 0;">Vous cherchez à arrondir vos fins de mois&nbsp;?<br>Vous cherchez un projet à temps plein en tant que Freelance ?&nbsp;<br>Vous
-				êtes une entreprise et cherchez un Freelance ?<br>Inscrivez-vous sur <span>Freelancer.com !</span>
+				êtes une entreprise et cherchez un Freelance ?<br>Inscrivez-vous sur <span class="frl">Freelancer.com !</span>
 			</p>
 		</div>
 	</section>

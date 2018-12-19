@@ -1,6 +1,6 @@
 <body>
 
-<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar notlogged">
 	<div class="container"><a class="navbar-brand logo" href="#">Freelancer.com</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse"

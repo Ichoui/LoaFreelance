@@ -1,5 +1,5 @@
 <?php $this->load->view('shared/header'); ?>
-<?php $this->load->view('shared/menubar'); ?>
+<?php $this->load->view('shared/menu'); ?>
 
 <main class="page payment">
     <section class="clean-block payment-form dark">

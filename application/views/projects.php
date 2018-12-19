@@ -1,6 +1,6 @@
 <?php $this->load->view('shared/header'); ?>
-<?php $this->load->view('shared/menubar'); ?>
-
+<?php $this->load->view('shared/menu'); ?>
+s
 
 <main class="page projects"></main>
 

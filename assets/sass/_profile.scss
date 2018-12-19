@@ -1,0 +1,24 @@
+.profile {
+  display: flex;
+  section {
+	height: 100%;
+  }
+  section.left {
+	img {
+	  width: 250px;
+	  border-radius: 50%;
+	}
+  }
+  section.right {
+
+	.identity {
+	  /*margin-left: 20px;*/
+	  display: flex;
+	}
+
+	.identity p {
+	  margin-left: 10px;
+	}
+  }
+
+}

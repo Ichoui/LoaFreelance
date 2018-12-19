@@ -1,0 +1,19 @@
+
+main:not(.index) {
+  height: 100vh;
+  padding-top: 12vh !important;
+}
+
+.clean-block.clean-hero:before {
+  position: unset;
+}
+
+.btn-outline-primary {
+  color:white;
+  background-color: $orange;
+  border:1px solid black;
+  &:hover {
+	border-color:$orange;
+	background-color: lighten($orange,10%);
+  }
+}

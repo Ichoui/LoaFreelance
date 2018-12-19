@@ -183,12 +183,4 @@ html, body {
   color: black;
 }
 
-.identity {
-  /*margin-left: 20px;*/
-  display: flex;
-}
-
-.identity p {
-  margin-left: 10px;
-}
 
