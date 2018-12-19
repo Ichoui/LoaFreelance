@@ -23,12 +23,4 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('notlogged/index');
 	}
-
-	public function login() {
-		$this->load->view('notlogged/login');
-	}
-
-	public function registration() {
-		$this->load->view('notlogged/registration');
-	}
 }

@@ -8,4 +8,4 @@
 
 ``application``  Contient le projet
 
-``application/views``  Contient toutes les assets (js, images, css et sass)
+``application/views``  Contient toutes les assets (js, images, css et scss)

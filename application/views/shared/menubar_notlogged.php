@@ -7,7 +7,7 @@
 			 id="navcol-1">
 			<ul class="nav navbar-nav ml-auto">
 				<!--				 SI REGISTRATION -->
-				<li class="nav-item" role="presentation"><a class="nav-link" href="login.html">RETOUR</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/notlogged/login')?>">RETOUR</a></li>
 				<!--				 SI LOGIN -->
 				<li class="nav-item" role="presentation"><a class="nav-link" href="index.html">RETOUR</a></li>
 				<!--				 SI INDEX-->
