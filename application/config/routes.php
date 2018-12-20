@@ -64,7 +64,7 @@ $route['/'] =  'home';
 
 $route['notlogged/registration'] =  'notlogged/registration';
 
-$route['dashboard'] =  'dashboard';
+$route['Accueil'] = 'Accueil';
 $route['payment'] =  'payment';
 $route['messages'] =  'messages';
 $route['profile'] =  'profile';
