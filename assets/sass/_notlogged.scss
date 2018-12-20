@@ -4,6 +4,11 @@
     background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)), url('../../assets/img/dashboard.jpg');
     background-size: cover;
   }
+  section:last-child {
+	background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)),url('../../assets/img/Step-all.jpg');
+	background-size: cover;
+
+  }
 }
 
 .frl {
