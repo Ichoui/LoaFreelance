@@ -12,9 +12,43 @@ $(function () {
 		});
 	}
 
-	// trick pour poser le active sur la bonne page
+
+	// ################## NOTLOGGED ##################
+	if ($('main.index').length > 0) {
+		// console.log($('body').find('main.index'));
+		$('body').css('overflow', 'auto');
+	}
+
+	// ################## MENU ##################
+	// trick pour poser le active du menu sur la bonne page
 	let origin = window.location.origin;
 	let url = window.location.pathname;
-
 	$('nav li a[href="' + origin + url + '"]').addClass('active');
+
+
+	// ################## PROFIL ##################
+	/// switch portfollio / profil
+	$('.user-porfollio').hide();
+	$('.switcher').on('click', function () {
+		let $this = $(this);
+
+		if ($this.hasClass('active')) {
+			$this.removeClass('active');
+		} else {
+			$this.addClass('active');
+		}
+
+		if ($this.hasClass('profil')) {
+			$this.addClass('active');
+			$('.switcher.portfollio').removeClass('active');
+			$('.user-profil').show();
+			$('.user-porfollio').hide();
+		} else if ($this.hasClass('portfollio')) {
+			$this.addClass('active');
+			$('.switcher.profil').removeClass('active');
+			$('.user-profil').hide();
+			$('.user-porfollio').show();
+		}
+	});
+
 });

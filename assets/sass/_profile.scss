@@ -2,6 +2,37 @@
   background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url(../../assets/img/Step_1.jpg);
   background-size: cover;
   font-size: .9em;
+
+  .switch {
+	position: absolute;
+	right: 0;
+	flex-direction: column;
+	margin-top: 10px;
+	z-index: 89;
+	@include breakpoint(col-lg) {
+	  margin-top: 0;
+	  flex-direction: row;
+	}
+	li {
+	  a {
+		color: #495057;
+		background-color: #fff;
+		border-color: #dee2e6 #dee2e6 #fff;
+		border-radius: .25rem;
+	  }
+	  a.active {
+		color: $orange;
+		border-color: $orange;
+		border-bottom-color: transparent;
+	  }
+	}
+	li:last-child {
+	  margin-top: 5px;
+	  @include breakpoint(col-lg) {
+		margin-top: 0;
+	  }
+	}
+  }
   .row {
 	margin: 0;
   }
@@ -9,58 +40,86 @@
 	margin-top: .5rem;
 	margin-bottom: .5rem;
   }
-  div.left {
-	img {
-	  width: 200px;
-	  border-radius: 50%;
-	  margin: 0 auto 20px;
-	}
-  }
-  div.right {
-	.identity {
-	  .names {
-		display: flex;
-		.prenom {
-		  margin-left: 10px;
-		}
-	  }
-	  span {
-		font-weight: bold;
-	  }
-	  .avis {
-		text-align: center;
-		img {
-		  width: 35px;
-		}
+  section.user-profil {
+	//display:none;
+	div.left {
+	  img {
+		width: 200px;
+		border-radius: 50%;
+		margin: 0 auto 20px;
 	  }
 	}
-  }
-  div.bottom {
-	margin: 0 auto 20px;
-	form {
-	  //text-align: center;
-	  label {
-		font-weight: bold;
-		display: block;
-	  }
-	  input, textarea, select {
-		width: 85%;
-		//margin: 0 auto;
-		float: left;
-		max-width: 400px;
-	  }
-	  button {
-		//display: block;
-		//text-transform: capitalize;
-		width: 15%;
-		float: left;
-		font-size: 1em;
-		&:before {
-		  content: 'Ok';
+	div.right {
+	  .identity {
+		.names {
+		  display: flex;
+		  .prenom {
+			margin-left: 10px;
+		  }
+		}
+		p {
+		  margin-bottom: .5rem !important;
+		  span {
+			font-weight: bold;
+		  }
+		}
+
+		.avis {
+		  text-align: center;
+		  img {
+			width: 35px;
+		  }
 		}
 	  }
-	  small {
-		width: 70%;
+	}
+	div.bottom {
+	  margin: 0 auto;
+	  @include breakpoint(lg) {
+		overflow: auto;
+		height: 40vh;
+	  }
+
+	  form {
+		//text-align: center;
+		label {
+		  font-weight: bold;
+		  display: block;
+		}
+		input, textarea, select {
+		  width: 85%;
+		  //margin: 0 auto;
+		  float: left;
+		  max-width: 400px;
+		}
+		button {
+		  //display: block;
+		  //text-transform: capitalize;
+		  width: 15%;
+		  float: left;
+		  font-size: 1em;
+		  &:before {
+			content: 'Ok';
+		  }
+		}
+		small {
+		  width: 70%;
+		}
+	  }
+	}
+
+  }
+  section.user-porfollio {
+	.block-projets {
+	  display: flex;
+	  flex-wrap: wrap;
+	  overflow: auto;
+	  justify-content: center;
+	  height: 70vh;
+	  .projet {
+		width: 250px;
+		height: 200px;
+		border: 1px solid grey;
+		margin: 5px;
 	  }
 	}
   }

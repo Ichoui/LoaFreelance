@@ -4,7 +4,7 @@
 		<div class="collapse navbar-collapse"
 			 id="navcol-1">
 			<ul class="nav navbar-nav ml-auto">
-				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('dashboard') ?>" title="Votre tableau de bord">Tableau de bord</a></li>
+				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('accueil') ?>" title="Accueil">Accueil</a></li>
 				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('projects') ?>" title="Vos projets">Projets</a></li>
 				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('messages') ?>" title="Votre boite mail">Messagerie</a></li>
 				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/') ?>" title="Votre profil">DECONNEXION</a></li>

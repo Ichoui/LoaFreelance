@@ -1,7 +1,13 @@
+body {
+  @include breakpoint(col-lg) {
+	overflow: hidden;
+  }
+}
+
 main:not(.index) {
   height: 100vh;
   @include breakpoint(lg) {
-	padding-top: 12vh !important;
+	padding-top: 10vh !important;
   }
 }
 
