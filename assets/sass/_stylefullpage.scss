@@ -11,7 +11,7 @@ main:not(.index) {
 .btn-outline-primary {
   color:white;
   background-color: $orange;
-  border:1px solid black;
+  border:1px solid grey;
   &:hover {
 	border-color:$orange;
 	background-color: lighten($orange,10%);
