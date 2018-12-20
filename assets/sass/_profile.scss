@@ -30,22 +30,31 @@
 	}
   }
   div.bottom {
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	form {
-	  text-align: center;
+	  //text-align: center;
 	  label {
 		font-weight: bold;
 		display: block;
 	  }
 	  input, textarea, select {
-		width: 90%;
-		margin: 0 auto;
+		width: 85%;
+		//margin: 0 auto;
+		float:left;
 		max-width: 400px;
 	  }
 	  button {
 		//display: block;
-		text-transform: capitalize;
+		//text-transform: capitalize;
+		width: 15%;
+		float:left;
 		font-size: 1em;
+		&:before {
+		  content:'Ok';
+		}
+	  }
+	  small {
+		width: 70%;
 	  }
 	}
 
