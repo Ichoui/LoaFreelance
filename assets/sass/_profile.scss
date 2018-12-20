@@ -1,24 +1,32 @@
 .profile {
-  display: flex;
-  section {
-	height: 100%;
+  .row {
+	margin:0;
   }
-  section.left {
+  div.left {
 	img {
-	  width: 250px;
+	  width: 200px;
 	  border-radius: 50%;
 	}
   }
-  section.right {
-
+  div.right {
 	.identity {
-	  /*margin-left: 20px;*/
-	  display: flex;
-	}
+	  span {
+		font-weight: bold;
+	  }
+	  }
+	  form {
+		label {
+		font-weight: bold;
+		  display:block;
+		}
+		input {
 
-	.identity p {
-	  margin-left: 10px;
-	}
+		}
+		button {
+		  display:block;
+		}
+	  }
+
   }
 
 }
