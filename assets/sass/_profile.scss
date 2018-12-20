@@ -19,13 +19,19 @@
   div.right {
 	.identity {
 	  .names {
-		display:flex;
+		display: flex;
 		.prenom {
 		  margin-left: 10px;
 		}
 	  }
 	  span {
 		font-weight: bold;
+	  }
+	  .avis {
+		text-align: center;
+		img {
+		  width: 35px;
+		}
 	  }
 	}
   }
@@ -40,24 +46,22 @@
 	  input, textarea, select {
 		width: 85%;
 		//margin: 0 auto;
-		float:left;
+		float: left;
 		max-width: 400px;
 	  }
 	  button {
 		//display: block;
 		//text-transform: capitalize;
 		width: 15%;
-		float:left;
+		float: left;
 		font-size: 1em;
 		&:before {
-		  content:'Ok';
+		  content: 'Ok';
 		}
 	  }
 	  small {
 		width: 70%;
 	  }
 	}
-
   }
-
 }
