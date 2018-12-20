@@ -59,7 +59,7 @@
 						<label for="cv">Curriculum Vitae</label>
 						<input type="file" class="form-control" id="cv" accept="application/pdf">
 						<button type="submit" class="btn btn-outline-primary"></button>
-						<small class="form-text text-muted">Uploadez votre CV</small>
+						<small class="form-text text-muted">Uploadez votre CV (format PDF)</small>
 					</div>
 				</form>
 			</div>

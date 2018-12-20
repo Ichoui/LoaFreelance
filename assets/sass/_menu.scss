@@ -1,5 +1,5 @@
 nav.navbar:not(.notlogged) {
-  @media all and (min-width: 992px) {
+  @include breakpoint(lg) {
 	height: 10vh;
   }
 }

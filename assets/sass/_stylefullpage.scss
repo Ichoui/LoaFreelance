@@ -1,7 +1,8 @@
-
 main:not(.index) {
   height: 100vh;
-  padding-top: 12vh !important;
+  @include breakpoint(lg) {
+	padding-top: 12vh !important;
+  }
 }
 
 .clean-block.clean-hero:before {
@@ -9,11 +10,11 @@ main:not(.index) {
 }
 
 .btn-outline-primary {
-  color:white;
+  color: white;
   background-color: $orange;
-  border:1px solid grey;
+  border: 1px solid grey;
   &:hover {
-	border-color:$orange;
-	background-color: lighten($orange,10%);
+	border-color: $orange;
+	background-color: lighten($orange, 10%);
   }
 }
