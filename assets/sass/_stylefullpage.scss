@@ -1,3 +1,10 @@
+body {
+  @include breakpoint(col-lg) {
+	overflow: hidden;
+
+  }
+}
+
 main:not(.index) {
   height: 100vh;
   @include breakpoint(lg) {

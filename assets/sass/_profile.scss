@@ -36,7 +36,13 @@
 	}
   }
   div.bottom {
-	margin: 0 auto 20px;
+	margin: 0 auto;
+	@include breakpoint(lg) {
+
+	  overflow: auto;
+	  height: 40vh;
+	}
+
 	form {
 	  //text-align: center;
 	  label {

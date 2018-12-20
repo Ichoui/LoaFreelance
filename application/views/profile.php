@@ -34,7 +34,6 @@
 					<a id="star-4" href=""><img src="<?= base_url('assets/img/star')?>"></a>
 					<a id="star-5" href=""><img src="<?= base_url('assets/img/star')?>"></a>
 				</div>
-
 			</div>
 
 		</div>
@@ -58,8 +57,8 @@
 				<div class="col-md-6">
 					<form id="form-job" action="" method="post" class="form-group">
 						<div class="form-group">
-							<label for="description">Métier</label>
-							<select class="form-control" id="sel1">
+							<label for="job">Métier</label>
+							<select class="form-control" id="job">
 								<option>Développeur</option>
 								<option>Cuisinier</option>
 								<option>Daesh</option>
@@ -88,6 +87,28 @@
 							<label for="description">Description</label>
 							<textarea type="text" class="form-control" id="description" placeholder="Votre description ..."></textarea>
 							<button type="submit" class="btn btn-outline-primary"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<form id="form-formation" action="" method="post" class="form-group">
+						<div class="form-group">
+							<label for="formation">Formation</label>
+							<input type="text" class="form-control" id="formation" placeholder="Votre formation ...">
+							<button type="submit" class="btn btn-outline-primary"></button>
+							<small class="form-text text-muted">Votre diplôme</small>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<form id="form-skill" action="" method="post" class="form-group">
+						<div class="form-group">
+							<label for="skills">Compétences</label>
+							<input type="text" class="form-control" id="skills" placeholder="Vos compétences ...">
+							<button type="submit" class="btn btn-outline-primary"></button>
+							<small class="form-text text-muted">Vos compétences acquises</small>
 						</div>
 					</form>
 				</div>
