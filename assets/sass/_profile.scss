@@ -1,6 +1,6 @@
 .profile {
   .row {
-	margin:0;
+	margin: 0;
   }
   div.left {
 	img {
@@ -13,19 +13,22 @@
 	  span {
 		font-weight: bold;
 	  }
-	  }
-	  form {
-		label {
+	}
+  }
+  div.bottom {
+	margin: 0 auto;
+	form {
+	  label {
 		font-weight: bold;
-		  display:block;
-		}
-		input {
-
-		}
-		button {
-		  display:block;
-		}
+		display: block;
 	  }
+	  input {
+
+	  }
+	  button {
+		display: block;
+	  }
+	}
 
   }
 
