@@ -68,4 +68,4 @@ $route['Accueil'] = 'Accueil';
 $route['payment'] =  'payment';
 $route['messages'] =  'messages';
 $route['profile'] =  'profile';
-$route['projects'] =  'projects';
+$route['projet'] =  'projet';

@@ -13,16 +13,16 @@
 
 			<ul class="point-interet">
 				<li>
-					<a href="<?= base_url('projects') ?>">Projet A - <span>{description-projet-abcdefgb}</span></a>
+					<a href="<?= base_url('projet') ?>">Projet A - <span>{description-projet-abcdefgb}</span></a>
 				</li>
 				<li>
-					<a href="<?= base_url('projects') ?>">Projet B - <span>{description-projet-abcdefgb}</span></a>
+					<a href="<?= base_url('projet') ?>">Projet B - <span>{description-projet-abcdefgb}</span></a>
 				</li>
 				<li>
-					<a href="<?= base_url('projects') ?>">Projet C - <span>{description-projet-abcdefgb}</span></a>
+					<a href="<?= base_url('projet') ?>">Projet C - <span>{description-projet-abcdefgb}</span></a>
 				</li>
 				<li>
-					<a href="<?= base_url('projects') ?>">Projet D - <span>{description-projet-abcdefgb}</span></a>
+					<a href="<?= base_url('projet') ?>">Projet D - <span>{description-projet-abcdefgb}</span></a>
 				</li>
 			</ul>
 			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('projects') ?>">Chercher un projet</a>
@@ -58,5 +58,6 @@
 	</section>-->
 </main>
 
+<?php $this->load->view('shared/chat-window'); ?>
 <?php $this->load->view('shared/footer'); ?>
 
