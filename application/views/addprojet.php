@@ -3,7 +3,19 @@
 
 <main class="page projet">
 	<section class="container">
-
+		<div class="add-projet">
+			<form action="" type="POST">
+				<label for="title-proj">Titre du projet :</label>
+				<input type="text" id="title-proj" placeholder="Titre du projet...">
+				<label for="tarif-proj">Tarif horaire (euros / heure)</label>
+				<input type="number" step='1' id="tarif-proj" placeholder="Tarif / horaire du projet...">
+				<label for="desc-proj">Description du projet</label>
+				<textarea type="text" id="desc-projet" placeholder="Description du projet..."></textarea>
+				<label for="skills-proj">Compétences recherchées</label>
+				<textarea type="text" id="skills-projet" placeholder="Description du projet..."></textarea>
+				<button class="btn btn-outline-primary" type="submit">Ajouter le projet</button>
+			</form>
+		</div>
 	</section>
 </main>
 <?php $this->load->view('shared/chat-window'); ?>
