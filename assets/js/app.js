@@ -51,4 +51,19 @@ $(function () {
 		}
 	});
 
+	// ################## MESSAGERIE INSTANTANNEE ##################
+	$('.chat-window-closed').on('click', function (e) {
+		$(this).hide();
+		$('.chat-window-opened').show();
+	});
+	$('.close-chat-window').on('click', function (e) {
+		$('.chat-window-opened').hide();
+		$('.chat-window-closed').show();
+	});
+	$('.contact').on('click', function (e) {
+		$('.chat-window-opened').addClass('extend');
+		$('.contact').removeClass('active');
+		$(this).addClass('active');
+	});
+
 });
