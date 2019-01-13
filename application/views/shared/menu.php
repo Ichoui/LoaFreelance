@@ -10,7 +10,7 @@
 				<li class="nav-item" role="presentation"><a class="nav-link" href="<?= base_url('/') ?>" title="Votre profil">DECONNEXION</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
-				<a class="nav-link" href="<?= base_url('profile') ?>"><img src="http://api.ichoui.fr/maple/IMG_7293.JPG" alt="ImageGoogle"></a>
+				<a class="nav-link" href="<?= base_url('profile') ?>"><img src="https://gitlab.com/uploads/-/system/user/avatar/3073155/avatar.png?width=400" alt="ImageGoogle"></a>
 			</div>
 		</div>
 	</div>

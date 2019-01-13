@@ -16,7 +16,7 @@
 	<section class="user-profil">
 		<div class="row">
 			<div class="left col  col-md-4">
-				<img src="http://api.ichoui.fr/maple/IMG_7293.JPG">
+				<img src="https://gitlab.com/uploads/-/system/user/avatar/3073155/avatar.png?width=400">
 			</div>
 			<div class="right col-md-6">
 				<div class="identity">
@@ -33,20 +33,20 @@
 					<p class="description"><span>Description :</span> {user.description}</p>
 					<!-- Cas : SI user sur son propre profil OU SI utilisateur qui n'a pas fait de projet avec OU SI utilisateur a déjà noté le profil -->
 					<div class="avis">
-						<img src="<?= base_url('assets/img/star') ?>">
-						<img src="<?= base_url('assets/img/star-empty') ?>">
-						<img src="<?= base_url('assets/img/star-empty') ?>">
-						<img src="<?= base_url('assets/img/star-empty') ?>">
-						<img src="<?= base_url('assets/img/star-empty') ?>">
+						<img src="<?= base_url('assets/img/star.svg') ?>">
+						<img src="<?= base_url('assets/img/star-empty.svg') ?>">
+						<img src="<?= base_url('assets/img/star-empty.svg') ?>">
+						<img src="<?= base_url('assets/img/star-empty.svg') ?>">
+						<img src="<?= base_url('assets/img/star-empty.svg') ?>">
 						<span class="nb-avis">51 avis</span>
 					</div>
 					<!-- sinon si il peut noter -->
 					<div class="avis">
-						<a id="star-1" href=""><img src="<?= base_url('assets/img/star') ?>"></a>
-						<a id="star-2" href=""><img src="<?= base_url('assets/img/star') ?>"></a>
-						<a id="star-3" href=""><img src="<?= base_url('assets/img/star') ?>"></a>
-						<a id="star-4" href=""><img src="<?= base_url('assets/img/star') ?>"></a>
-						<a id="star-5" href=""><img src="<?= base_url('assets/img/star') ?>"></a>
+						<a id="star-1" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
+						<a id="star-2" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
+						<a id="star-3" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
+						<a id="star-4" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
+						<a id="star-5" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
 					</div>
 				</div>
 

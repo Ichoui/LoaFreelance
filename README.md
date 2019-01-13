@@ -1,7 +1,7 @@
 ### Installation
 
-``npm i`` => Installe les dépendances 
-``npm i -g gulp@3.9.1``<br>
+``npm i -g gulp@3.9.1`` (si gulp n'est pas installé sur le poste)<br> 
+``npm i`` => Installe les dépendances <br>
 ``npm i --save gulp@3.9.1 bootstrap-sass gulp-sass gulp-sourcemaps``
 
 ### Config

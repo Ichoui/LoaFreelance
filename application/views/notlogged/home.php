@@ -8,7 +8,7 @@
 			<p><br>Ce site web regroupe la majorité des freelances de France.&nbsp;<br>Que vous soyez Freelance dans l'informatique, la cuisine, le graphisme, tous les Freelances Français
 				sont regroupés sur ce site.<br><br></p>
 			<p>Vous cherchez un projet en tant que Freelance ?&nbsp;<br>Vous êtes une entreprise et cherchez un Freelance ?<br>Inscrivez-vous sur <span class="frl">Freelancer.com</span> !
-			</p><a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('registration') ?>">Rejoignez-nous !</a></div>
+			</p><a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('/registration') ?>">Rejoignez-nous !</a></div>
 	</section>
 	<section class="clean-block clean-hero">
 		<div class="text" style="color: black;">

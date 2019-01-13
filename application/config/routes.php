@@ -62,7 +62,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['notlogged/login'] =  'notlogged/login';
 $route['/'] =  'home';
 
-$route['notlogged/registration'] =  'notlogged/registration';
+$route['notlogged/registration'] =  'registration';
 
 $route['Accueil'] = 'Accueil';
 $route['payment'] =  'payment';
