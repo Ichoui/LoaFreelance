@@ -138,33 +138,49 @@
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+			</div>
+			<div class="projet">
+				<h2 class="nom-projet">Projet A</h2>
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
+				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 		</div>
 	</section>
 </main>
 
 <?php $this->load->view('shared/footer'); ?>
+
+<!--
+ Quand on a le statut de recruteur, on ne peut voir que la partie haute ainsi que le portfollio des réalisations.
+ -->

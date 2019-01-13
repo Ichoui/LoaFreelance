@@ -19,4 +19,19 @@ Lorsqu'on effectue une modification sur notre config.php local, <u>ON DOIT</u> f
 ``application/views``  Contient toutes les assets (js, images, css et scss)
 
 
+### 
+`Porteur de projet :`
+- peut publier projet (titre description mot clef critere (tech souhaité, budget, tarif horaire max)
+- peut parcourir les profile des freelanceurs 
+- peut recevoir des notes et comm de la part des freelanceur
+- presentation des derniers free inscrits, affichage des free les mieux notés
+
+`Freelancer :`
+- se voit proposer des projets correspondant à leur tarif / compétences
+- après une discussion, peut remplir un devis
+possède un profil consultable par le porteur de projet avec notes & commentaires
+
+
+paiement via paypal à chaque jalon
+
 

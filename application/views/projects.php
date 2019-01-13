@@ -3,8 +3,10 @@
 
 <main class="page projects">
 	<section>
-ee
+		<h1 class="main-title">{Projet.name}</h1>
 	</section>
 </main>
 
 <?php $this->load->view('shared/footer'); ?>
+
+

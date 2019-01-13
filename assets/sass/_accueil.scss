@@ -1,14 +1,49 @@
 .accueil {
   section {
-	background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)),url('../../assets/img/dashboard.jpg');
+	background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)), url('../../assets/img/dashboard.jpg');
 	height: 90vh;
-    background-size: cover;
-    width: 100%;
+	background-size: cover;
+	width: 100%;
+	display: block !important;
 	.container-text {
-	  color:black;
+	  color: black;
 	  h1 {
 		font-weight: bold;
+		padding-top: 20px;
+	  }
+	  ul.point-interet {
+		width: 350px;
+		margin: 0 auto 15px;
+		text-align: left;
+		font-weight: bold;
+		font-size: 1.1em;
+		background: rgba(255, 255, 255, .6);
+		padding: 10px 20px;
+		border-radius: 5px;
+		max-height: 250px;
+		overflow: hidden;
+		li {
+		  list-style-type: none;
+		  height: 25px;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  white-space: nowrap;
+		  a {
+			color: $orange;
+			img {
+			  width: 20px;
+			}
+			span {
+			  color: black;
+			  font-size: .8em;
+			}
+		  }
+		}
 	  }
 	}
+  }
+  section.recruteur-part {
+  }
+  section.freelancer-part {
   }
 }
