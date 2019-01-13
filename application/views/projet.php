@@ -1,8 +1,8 @@
 <?php $this->load->view('shared/header'); ?>
 <?php $this->load->view('shared/menu'); ?>
 
-<main class="page projects">
-	<section>
+<main class="page projet">
+	<section class="container">
 		<h1 class="main-title">{Projet.name}</h1>
 		<div class="about">
 			<div class="description"><span>Description :</span> Lorem ipsum dolor sit amet, consectetur adipisicing

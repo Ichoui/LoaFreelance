@@ -13,7 +13,7 @@
 	</ul>
 
 	<!-- SECTION USER PROFIL-->
-	<section class="user-profil">
+	<section class="user-profil container">
 		<div class="row">
 			<div class="left col  col-md-4">
 				<img src="https://gitlab.com/uploads/-/system/user/avatar/3073155/avatar.png?width=400">
@@ -131,39 +131,39 @@
 		</div>
 	</section>
 	<!--	 SECTION PORTFOLLIO-->
-	<section class="user-porfollio">
+	<section class="user-porfollio container">
 		<h1 class="text-center">Portfollio</h1>
 		<p class="text-center">Vous trouverez ici une liste de tous les projets complété par {user.nom & prenom}</p>
 		<div class="block-projets">
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 			<div class="projet">
 				<h2 class="nom-projet">Projet A</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="#" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
 			</div>
 		</div>
 	</section>
