@@ -13,10 +13,7 @@ Lorsqu'on effectue une modification sur notre config.php local, <u>ON DOIT</u> f
 ### Lancer le front
 ``gulp`` => Permet de compiler le sass en css. A faire à la racine du projet (.../LoaFreelance)
 
-### Projet
-``application``  Contient le projet
-
-``application/views``  Contient toutes les assets (js, images, css et scss)
+`localhost/LoaFreelance/` Lien de base 
 
 ### Versionnage 
 Commandes git :
