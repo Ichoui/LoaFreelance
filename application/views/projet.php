@@ -24,9 +24,21 @@
 				<li class="jalon">04/03/2019</li>
 				<li class="jalon">04/04/2019</li>
 			</ul>
-			<!-- Accessible pour le freelanceur non inscrit-->
-			<a href="<?= base_url('messages') ?>" class="btn btn-outline-primary">Contacter le porteur du projet</a>
 
+			<!-- Accessible pour le freelanceur non inscrit-->
+			<div class="devis-list">
+				<div class="devis">
+					<div class="user">
+						<div class="name">PGM Freelancer</div>
+						<div class="tarif">15 € / H</div>
+						<div class="avis">Avis : {5} <img src="<?= base_url('/assets/img/star.svg') ?>"></div>
+						<!-- Seulement pour un porteur de projet-->
+						<a href="<?= base_url('messages') ?>" class="btn btn-outline-primary">Contacter</a>
+					</div>
+					<div
+						class="msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex impedit ipsum perspiciatis! Delectus ipsam labore minima nemo, quae quis voluptatem.</div>
+				</div>
+			</div>
 
 		</div>
 	</section>

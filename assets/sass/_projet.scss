@@ -16,13 +16,38 @@
 	  }
 	}
 	.jalons-list {
-	  list-style-type: decimal;
+	  list-style-type: none;
+	  display: flex;
+	  flex-wrap: wrap;
 	  .jalon {
-
+		margin-left: 10px;
 	  }
 	  .jalon.payed {
 		color: green;
 		font-weight: bold;
+	  }
+	}
+	.devis-list {
+	  width: 100%;
+	  height: 40vh;
+	  overflow: auto;
+	  .devis {
+		display: flex;
+		margin: 5px auto;
+		border: 1px solid $orange;
+		border-radius: 5px;
+		padding: 5px;
+		.user {
+		  width: 30%;
+		  font-weight: bold;
+		  .avis img {
+			width: 20px;
+		  }
+		}
+		.msg {
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		}
 	  }
 	}
   }
@@ -55,14 +80,14 @@
   }
   .add-projet form {
 	margin-top: 20px;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	input, textarea{
+	input, textarea {
 	  width: 400px;
 	}
 	label {
-	  color:$orange;
+	  color: $orange;
 	  font-weight: bold;
 	}
 	button {
