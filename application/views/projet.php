@@ -26,6 +26,14 @@
 			</ul>
 
 			<!-- Accessible pour le freelanceur non inscrit-->
+			<div class="proposition-devis">
+				<form action="" type="POST">
+					<textarea placeholder="Postulez pour ce projet en écrivant un texte au porteur du projet..."></textarea>
+					<button class="btn btn-outline-primary">Envoyer la proposition</button>
+				</form>
+			</div>
+			<hr>
+			<!-- Accessible pour tous-->
 			<div class="devis-list">
 				<div class="devis">
 					<div class="user">
@@ -33,7 +41,7 @@
 						<div class="tarif">15 € / H</div>
 						<div class="avis">Avis : {5} <img src="<?= base_url('/assets/img/star.svg') ?>"></div>
 						<!-- Seulement pour un porteur de projet-->
-						<a href="<?= base_url('messages') ?>" class="btn btn-outline-primary">Contacter</a>
+						<a href="<?= base_url('messages') ?>" class="btn btn-outline-primary">Accepter</a>
 					</div>
 					<div
 						class="msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex impedit ipsum perspiciatis! Delectus ipsam labore minima nemo, quae quis voluptatem.</div>
@@ -46,6 +54,7 @@
 <?php $this->load->view('shared/chat-window'); ?>
 <?php $this->load->view('shared/footer'); ?>
 
+<script src="<?= base_url() ?>assets/js/mdvg.js"></script>
 
 <!--visionner un projet-->
 
