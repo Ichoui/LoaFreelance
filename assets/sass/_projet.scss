@@ -10,26 +10,19 @@
 	text-align: center;
   }
   .about-projet {
-	.description {
-
+	.description, .proprietaire, .free {
 	  span {
 		font-weight: bold;
 	  }
 	}
-	.proprietaire {
+	.jalons-list {
+	  list-style-type: decimal;
+	  .jalon {
 
-	  span {
-		font-weight: bold;
 	  }
-	}
-	.free {
-	  span {
+	  .jalon.payed {
+		color: green;
 		font-weight: bold;
-	  }
-	  ul {
-		li {
-
-		}
 	  }
 	}
   }

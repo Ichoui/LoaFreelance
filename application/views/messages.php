@@ -5,22 +5,22 @@
 	<section class="container">
 		<div class="email-part">
 			<div class="mail">
+				<div class="expediteur">expediteur</div>
 				<div class="title">Titre</div>
-				<div class="description">Description</div>
 			</div>
 			<div class="mail">
+				<div class="expediteur">expediteur</div>
 				<div class="title">Titre</div>
-				<div class="description">Description</div>
 			</div>
 			<div class="mail">
+				<div class="expediteur">expediteur</div>
 				<div class="title">Titre</div>
-				<div class="description">Description</div>
 			</div>
 		</div>
 		<div class="corps-text-part">
 			<div class="header">
-				<div class="title">Title</div>
-				<div class="objet">Objet :Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, fugit! Objet</div>
+				<div class="expediteur">Nom de l'expediteur</div>
+				<div class="title">Mon titre c'est de la daube</div>
 				<div class="repondre">Répondre</div>
 			</div>
 			<div
@@ -29,6 +29,7 @@
 				<div class="close-reponse">Retourner au message</div>
 				<form action="" type="POST">
 					<textarea id="" placeholder="Votre réponse.."></textarea>
+					<input type="file" multiple="multiple">
 					<button class="btn btn-outline-primary">Envoyer</button>
 				</form>
 			</div>

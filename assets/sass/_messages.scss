@@ -26,10 +26,10 @@
 		margin: 2px auto;
 		border-radius: 5px;
 		padding: 2px 5px;
-		.title {
+		.expediteur {
 		  font-weight: bold;
 		}
-		.description {
+		.title {
 		  font-size: .8em;
 		}
 	  }
@@ -54,10 +54,10 @@
 		height: 20%;
 		overflow: auto;
 		position: relative;
-		.title {
+		.expediteur {
 		  font-weight: bold;
 		}
-		.objet {
+		.title {
 		  font-size: .8em;
 		}
 		.repondre {
@@ -81,10 +81,11 @@
 	  .reponse {
 		display: none;
 		position: relative;
+		margin-top: 25px;
 		.close-reponse {
 		  position: absolute;
 		  right: 0;
-		  bottom: 10px;
+		  top: -20px;
 		  font-weight: bold;
 		  font-style: italic;
 		  font-size: .8em;
