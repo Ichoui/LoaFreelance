@@ -25,7 +25,7 @@
 					<a href="<?= base_url('projet') ?>">Projet D - <span>{description-projet-abcdefgb}</span></a>
 				</li>
 			</ul>
-			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('projects') ?>">Chercher un projet</a>
+			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('consultprojet') ?>">Chercher un projet</a>
 		</div>
 	</section>
 
