@@ -16,6 +16,7 @@
 					<li>Free B</li>
 				</ul>
 			</div>
+			<a href="<?= base_url('messages')?>" class="btn btn-outline-primary">Contacter le porteur du projet</a>
 		</div>
 	</section>
 </main>

@@ -1,8 +1,55 @@
 .messages {
   section {
-	background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)),url('../../assets/img/Step_3.jpg');
+	background: linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, 0.35)), url('../../assets/img/Step_3.jpg');
 	height: 90vh;
 	background-size: cover;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include breakpoint(col-exsm) {
+	  flex-direction: column;
+	}
+	.email-part {
+	  width: 40%;
+	  height: 75vh;
+	  overflow: auto;
+	  @include breakpoint(col-exsm) {
+		width: 100%;
+		height: 20vh;
+	  }
+	  .mail {
+		border: 1px solid $orange;
+		height: 50px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin: 2px auto;
+		border-radius: 5px;
+		padding: 2px 5px;
+		.title {
+		  font-weight: bold;
+		}
+		.description {
+		  font-size: .8em;
+		}
+	  }
+	  .mail.active {
+		background-color: $orange;
+	  }
+	  &:hover {
+		cursor: pointer;
+	  }
+
+	}
+	.corps-text-part {
+	  width: 60%;
+	  height: 75vh;
+	  overflow: auto;
+	  @include breakpoint(col-exsm) {
+		width: 100%;
+		height: 70vh;
+		margin-top: 5px;
+	  }
+	}
   }
 }

@@ -57,7 +57,7 @@ $(function () {
 		$('.chat-window-opened').show();
 	});
 	$('.close-chat-window').on('click', function (e) {
-		$('.chat-window-opened').hide();
+		$('.chat-window-opened').hide().removeClass('extend');
 		$('.chat-window-closed').show();
 	});
 	$('.contact').on('click', function (e) {
@@ -65,5 +65,12 @@ $(function () {
 		$('.contact').removeClass('active');
 		$(this).addClass('active');
 	});
+
+	// ################## MESSAGERIE INTERNE ##################
+	$('.mail').on('click', function(e) {
+		$('.mail').removeClass('active');
+		$(this).addClass('active');
+	});
+
 
 });

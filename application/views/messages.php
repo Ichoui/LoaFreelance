@@ -3,10 +3,23 @@
 
 <main class="page landing-page messages">
 	<section class="container">
-		discussion mail classique
-		partie haute = formulaire d'envoi de message (nom objet message)
-		partie basse = réception de message (nom objet message)
+		<div class="email-part">
+			<div class="mail">
+				<div class="title">Titre</div>
+				<div class="description">Description</div>
+			</div>
+			<div class="mail">
+				<div class="title">Titre</div>
+				<div class="description">Description</div>
+			</div>
+			<div class="mail">
+				<div class="title">Titre</div>
+				<div class="description">Description</div>
+			</div>
+		</div>
+		<div class="corps-text-part">
+
+		</div>
 	</section>
 </main>
-<?php $this->load->view('shared/chat-window'); ?>
-<?php $this->load->view('shared/footer');?>
+<?php $this->load->view('shared/footer'); ?>
