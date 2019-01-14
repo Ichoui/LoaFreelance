@@ -67,9 +67,19 @@ $(function () {
 	});
 
 	// ################## MESSAGERIE INTERNE ##################
-	$('.mail').on('click', function(e) {
+	$('.mail').on('click', function (e) {
 		$('.mail').removeClass('active');
 		$(this).addClass('active');
+	});
+
+	$('.repondre').on('click', function (e) {
+		console.log($(this))
+		var message = $(this).closest('.corps-text-part').find('.message');
+		var reponse = $(this).closest('.corps-text-part').find('.reponse');
+		console.log(message);
+		message.hide();
+		reponse.show();
+
 	});
 
 
