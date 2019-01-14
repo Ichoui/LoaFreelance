@@ -73,14 +73,18 @@ $(function () {
 	});
 
 	$('.repondre').on('click', function (e) {
-		console.log($(this))
 		var message = $(this).closest('.corps-text-part').find('.message');
 		var reponse = $(this).closest('.corps-text-part').find('.reponse');
-		console.log(message);
 		message.hide();
 		reponse.show();
-
 	});
+
+	$('.close-reponse').on('click', function (e) {
+		var message = $(this).closest('.corps-text-part').find('.message');
+		var reponse = $(this).closest('.corps-text-part').find('.reponse');
+		message.show();
+		reponse.hide();
+	})
 
 
 });

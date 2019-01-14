@@ -80,6 +80,19 @@
 	  }
 	  .reponse {
 		display: none;
+		position: relative;
+		.close-reponse {
+		  position: absolute;
+		  right: 0;
+		  bottom: 10px;
+		  font-weight: bold;
+		  font-style: italic;
+		  font-size: .8em;
+		  color: $orange;
+		  &:hover {
+			cursor: pointer;
+		  }
+		}
 		textarea {
 		  width: 100%;
 		  height: 30vh;
