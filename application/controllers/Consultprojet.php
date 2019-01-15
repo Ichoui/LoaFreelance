@@ -3,10 +3,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Consultprojet extends CI_Controller
 {
+	public function __construct(){
+		 parent::__construct();
+		 $this->load->helper('url');
+		$this->load->model('project');
+	}
 
 	public function index()
 	{
-		$this->load->helper('url');
-		$this->load->view('consultprojet');
+		
+		$data = [
+			'test' => ["popo","plplp"],
+			'project' => $this->project->getProject()
+		];
+		//var_dump($data);
+		$this->load->view('consultprojet', $data);
+	}
+
+
+	public function fetch()
+	{
+		$output = '';
+		$query = '';
+		if($this->input->post('query')){
+			$query = $this->input->post('query');
+		}
+		$project_result = $this->project->fetch_data($query);
+		//var_dump($project_result);
+		
+		if($project_result->num_rows() > 0)
+		{
+			foreach ($project_result->result() as $row) {
+				$output .= '
+				<div class="projet">
+				<h2 class="nom-projet">'.$row->name.'</h2>
+				<p>'.$row->description.'</p>
+
+				<a href="'.base_url('projet').'" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				</div>
+				';			
+			}
+		}
+		else
+		{
+			$output .= '<p> Pas de projet trouvé</p>';
+		}
+		echo $output;
 	}
 }
