@@ -31,4 +31,16 @@ class Project extends CI_Model
   	return $this->db->get();
   }
 
+  public function addProjet($name, $description, $skills)
+  {
+    $data = array(
+      'name' => $name,
+      'description' => $description,
+      'date_creation' => date("Y-m-d H:i:s"),
+      'path_cdcf' => '',
+      'statut' => 'IN_SEARCH',
+      'le_porteur_du_projet' => '1'
+    );
+    $this->db->insert('project',$data);
+  }
 }
