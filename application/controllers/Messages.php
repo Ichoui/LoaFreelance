@@ -55,20 +55,30 @@ class Messages extends CI_Controller
 		$output ='';
 		$error ='<p>';
 		$destinataire ='';
+		$title = '';
 		$objet = '';
 		$message = '';
 
 		if($this->input->post('destinataire')){
-			$destinataire = $this->input->post('destinataire');
-			
+			$destinataire = $this->input->post('destinataire');			
 			if($this->input->post('objet'))
 			{
-
 				$objet = $this->input->post('objet');
 				if($this->input->post('message'))
 				{
-					$output["message"] = $this->input->post('message');
-					$error .= "Message envoyé";
+					$message = $this->input->post('message');
+					if($this->input->post('titre'))
+					{
+						$title = $this->input->post('titre');
+						$this->message->sendAMessage("1","2",$title,$objet,$message);
+						$error .= "Message envoyé";
+					}
+					else
+					{
+						$error .= "Titre vide";
+					}
+					
+					
 				}
 				else
 				{

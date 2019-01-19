@@ -26,10 +26,10 @@
 			<div id="message" class="message"></div>
 			<div class="reponse">
 				<div class="close-reponse">Retourner au message</div>
-				<form action="" type="POST">
+				<form id="form_response" action="" type="POST">
 					<textarea id="" placeholder="Votre réponse.."></textarea>
 					<input type="file" multiple="multiple">
-					<button class="btn btn-outline-primary">Envoyer</button>
+					<button name="submit" class="btn btn-outline-primary">Envoyer</button>
 				</form>
 			</div> 
 		</div>
@@ -38,7 +38,7 @@
 		<!-- Ecrire un nouveau message à designer :p -->
 
 	<!--form_open('messages/sendMessage'); -->
-	<form>
+	<form id="form_message">
 	  		<div class="form-group">		    
 		    <input type="email" id="input_email" placeholder="@Destinataire">
 		  </div>
@@ -51,7 +51,7 @@
 		  <div class="form-group">
 		  <textarea class="form-control" rows="5" id="input_message" placeholder="message"></textarea>
 		  </div>
-		  <button id="btn_send_msg"class="btn btn-primary">Envoyé</button>
+		  <button name="submit" id="btn_send_msg"class="btn btn-primary">Envoyé</button>
 	<!--//form_close(); -->
 </form>
 <div id="statut_send"></div>
@@ -65,6 +65,12 @@
 <script>
 $(document).ready(function(){
 
+$(function(){
+	$('#form_message').on('submit', function (e){
+		e.preventDefault();
+		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
+	})
+})
 	
 function sendFromMessage(destinataire,titre,objet,message)
 {
@@ -78,8 +84,10 @@ function sendFromMessage(destinataire,titre,objet,message)
 		},
 		//dataType: 'JSON',
 		success:function(data){
-			//$('#statut_send').html(data);
-			alert(data);
+			//$('#statut_send').empty();
+			$('#statut_send').html(data);
+			$('#statut_send').fadeIn();
+			$("#statut_send").fadeOut(2000, function() { $(this).empty();});
 		}
 	})
 	return false;
@@ -104,10 +112,12 @@ function sendFromMessage(destinataire,titre,objet,message)
 		var id = $(this).attr('id').replace("message_","");
 		load_data(id);
 	});
+	/*
 
 	$('#btn_send_msg').on('click', function(){
 		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
 	});
+	*/
 	
 });
 </script>

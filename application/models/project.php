@@ -11,10 +11,15 @@ class Project extends CI_Model
     $this->load->database();
   }
 
-  public function getProject()
+  public function getProjectBystatut()
   {
   	$query = $this->db->get_where('project',array('statut'=>"IN_SEARCH"));
   	return $query->result();
+  }
+
+  public function getProjectById($id)
+  {
+    return $this->db->get_where('project',array('id'=>$id));
   }
 
   public function fetch_data($query)

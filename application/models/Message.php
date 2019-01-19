@@ -40,7 +40,19 @@ class Message extends CI_Model
     return $this->db->get_where('interne_message',array('id'=> $id));
   }
 
-  
+  public function sendAMessage($id_expediteur,$id_destinataire,$title,$object,$message)
+  {
+    $data = array(
+      'id_expediteur' => $id_expediteur,
+      'id_destinataire' => $id_destinataire,
+      'date_send' => date('Y-m-d H:i:s'),
+      'title' => $title,
+      'object' => $object,
+      'message' => $message
+    );
+
+    $this->db->insert('interne_message',$data);
+  }
 
   
 }

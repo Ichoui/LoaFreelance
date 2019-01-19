@@ -34,4 +34,11 @@ class User extends CI_Model
       return $query->row_array();
   }
 
+
+
+  public function getPorteurProjetById($id)
+  {
+    return $this->db->get_where('users',array('id'=>$id));
+  }
+
 }
