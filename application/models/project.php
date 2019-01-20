@@ -11,10 +11,15 @@ class Project extends CI_Model
     $this->load->database();
   }
 
-  public function getProject()
+  public function getProjectBystatut()
   {
   	$query = $this->db->get_where('project',array('statut'=>"IN_SEARCH"));
   	return $query->result();
+  }
+
+  public function getProjectById($id)
+  {
+    return $this->db->get_where('project',array('id'=>$id));
   }
 
   public function fetch_data($query)
@@ -31,4 +36,16 @@ class Project extends CI_Model
   	return $this->db->get();
   }
 
+  public function addProjet($name, $description, $skills)
+  {
+    $data = array(
+      'name' => $name,
+      'description' => $description,
+      'date_creation' => date("Y-m-d H:i:s"),
+      'path_cdcf' => '',
+      'statut' => 'IN_SEARCH',
+      'le_porteur_du_projet' => '1'
+    );
+    $this->db->insert('project',$data);
+  }
 }

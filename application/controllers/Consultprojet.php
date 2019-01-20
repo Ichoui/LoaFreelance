@@ -14,7 +14,7 @@ class Consultprojet extends CI_Controller
 		
 		$data = [
 			'test' => ["popo","plplp"],
-			'project' => $this->project->getProject()
+			'project' => $this->project->getProjectBystatut()
 		];
 		//var_dump($data);
 		$this->load->view('consultprojet', $data);
@@ -35,11 +35,11 @@ class Consultprojet extends CI_Controller
 		{
 			foreach ($project_result->result() as $row) {
 				$output .= '
-				<div class="projet">
+				<div id ="'.$row->id.'"class="projet">
 				<h2 class="nom-projet">'.$row->name.'</h2>
 				<p>'.$row->description.'</p>
 
-				<a href="'.base_url('projet').'" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Accéder</a>
 				</div>
 				';			
 			}
