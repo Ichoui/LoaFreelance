@@ -72,7 +72,7 @@ $(function () {
 		$(this).addClass('active');
 	});
 
-	$('.repondre').on('click', function (e) {
+	$(document).on('.reponse', 'click', function (e) {
 		var message = $(this).closest('.corps-text-part').find('.message');
 		var reponse = $(this).closest('.corps-text-part').find('.reponse');
 		message.hide();

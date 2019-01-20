@@ -7,29 +7,28 @@ class Login extends CI_Controller
   {
   	parent::__construct();
     $this->load->model('user');
-		$this->load->helper('url');
 		$this->load->helper('form');
 
   }
 
 	public function index()
 	{
-
-
 		$data = [
-				'place' => 'login',
+			'place' => 'login',
 		];
 		$this->load->view('notlogged/login', $data);
 	}
 
 	public function connexion() {
 
-			var_dump($this->input->post('email'));
-			$login = $this->user->get_connected_user();
+		$login = $this->user->get_connected_user();
 
-			if(!empty($login))
-				$this->load->view('profile');
+		if(!empty($login)) {
+			$this->session->set_userdata($login);
+			redirect('profile');
+		}
 
-			$this->index();
+
+		redirect('login');
 	}
 }

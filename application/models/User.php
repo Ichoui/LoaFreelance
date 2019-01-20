@@ -17,21 +17,14 @@ class User extends CI_Model
   public $cv;
   public $description;
 
-  function __construct()
-  {
-    $this->load->database();
-  }
-
   public function get_connected_user()
   {
-      var_dump($this->input->post('email') . ' ' . $this->input->post('password'));
-      die;
-      $query = $this->db->get_where('users', [
-        'email' => $this->input->post('email'),
-        'password' => $this->input->post('password')
-      ]);
+    $query = $this->db->get_where('users', [
+      'email' => $this->input->post('email'),
+      'password' => $this->input->post('password')
+    ]);
 
-      return $query->row_array();
+    return $query->row_array();
   }
 
 }
