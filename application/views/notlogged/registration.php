@@ -8,10 +8,11 @@
                 <h2 class="text-info">S'enregistrer</h2>
                 <p>Vous êtes sur le point de nous rejoindre. Remplissez le formulaire ci-dessous.</p>
             </div>
-            <form>
-                <div class="form-group"><input class="form-control item" type="text" placeholder="Nom" id="name"></div>
-                <div class="form-group"><input class="form-control item" type="email" placeholder="Email" id="email"></div>
-                <div class="form-group"><input class="form-control item" type="password" placeholder="Mot de passe" id="password"></div>
+            <?= form_open('registration/signup') ?>
+            <div class="form-group"><input class="form-control item" type="text" placeholder="Nom" id="name" name="last_name"></div>
+            <div class="form-group"><input class="form-control item" type="text" placeholder="Prénom" name="first_name"></div>
+                <div class="form-group"><input class="form-control item" type="email" placeholder="Email" id="email" name="email"></div>
+                <div class="form-group"><input class="form-control item" type="password" placeholder="Mot de passe" id="password" name="password"></div>
                 <button class="btn btn-primary btn-block" type="submit" style="background-color: #49c5b6;">S'enregistrer</button>
             </form>
         </div>
