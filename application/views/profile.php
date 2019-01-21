@@ -11,7 +11,7 @@
 			<a class="nav-link switcher portfollio" href="#">Portfollio</a>
 		</li>
 	</ul>
-
+	<?php // var_dump($_SESSION); ?>
 	<!-- SECTION USER PROFIL-->
 	<section class="user-profil container">
 		<div class="row">
