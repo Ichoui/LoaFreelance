@@ -12,7 +12,15 @@
 				<label for="desc-proj">Description du projet</label>
 				<textarea type="text" id="desc-projet" placeholder="Description du projet..."></textarea>
 				<label for="skills-proj">Compétences recherchées</label>
-				<textarea type="text" id="skills-projet" placeholder="Description du projet..."></textarea>
+				<!--<textarea type="text" id="skills-projet" placeholder="Description du projet..."></textarea>-->
+				<select multiple>
+					<?php
+
+						foreach ($skills as $option) {
+							echo "<option value=".$option->skills_name.">".$option->skills_name."</option>";
+						}
+					?>
+				</select>
 				<button class="btn btn-outline-primary" type="submit">Ajouter le projet</button>
 			</form>
 		</div>

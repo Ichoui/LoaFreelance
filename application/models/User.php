@@ -5,36 +5,33 @@
  */
 class User extends CI_Model
 {
-  public $oauth_provider;
-  public $oauth_id;
   public $first_name;
   public $last_name;
   public $email;
+  public $password;
   public $gender;
   public $locale;
   public $picture;
-  public $link;
+  public $job;
+  public $hourly_rate;
+  public $cv;
+  public $description;
 
   function __construct()
   {
     $this->load->database();
   }
 
-  public function get_connected_user($logs, $google = FALSE)
+  public function get_connected_user()
   {
-      if(!isset($logs['oauth_id']))
-      {
-        $query = $this->db->get_where('users', [
-          'email' => $logs['email'],
-          'password' => $logs['password']
-        ]);
-        return $query->row_array();
-      }
+      var_dump($this->input->post('email') . ' ' . $this->input->post('password'));
+      die;
+      $query = $this->db->get_where('users', [
+        'email' => $this->input->post('email'),
+        'password' => $this->input->post('password')
+      ]);
 
-        $query = $this->db->get_where('users', [
-          'oauth_id' => $logs['oauth_id'
-        ]);
-        return $query->row_array()
+      return $query->row_array();
   }
 
 }
