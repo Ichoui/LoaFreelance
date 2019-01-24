@@ -76,12 +76,16 @@
 	  padding: 5px;
 	  border-radius: 5px;
 	  h2 {
+		font-size: 1.3em;
 		color: $orange;
 		text-align: center;
 	  }
+	  p:first-child {
+		font-size: .8em;
+	  }
 	  a {
 		position: absolute;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%);
 		left: 50%;
 		bottom: 5px;
 	  }
