@@ -18,23 +18,44 @@
 		</div>
 		
 		<div class="corps-text-part">
-			<!--
 			<div class="header">
-				<div id="title" class="expediteur">Nom de l'expediteur</div>
-				<div id="object" class="title">Mon titre c'est de la daube</div>
+				<div id="title" class="expediteur"></div>
+				<div id="object" class="title"></div>
 				<div class="repondre">Répondre</div>
 			</div>
-			<div id="message" class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur blanditiis cumque debitis dignissimos distinctio dolor dolorem eos excepturi explicabo illo maiores minima molestiae nam natus nemo nihil non omnis optio placeat quasi quis .</div>
+			<div id="message" class="message"></div>
 			<div class="reponse">
 				<div class="close-reponse">Retourner au message</div>
-				<form action="" type="POST">
+				<form id="form_response" action="" type="POST">
 					<textarea id="" placeholder="Votre réponse.."></textarea>
 					<input type="file" multiple="multiple">
-					<button class="btn btn-outline-primary">Envoyer</button>
+					<button name="submit" class="btn btn-outline-primary">Envoyer</button>
 				</form>
-			</div> -->
+			</div> 
 		</div>
-	
+		
+
+		<!-- Ecrire un nouveau message à designer :p -->
+
+	<!--form_open('messages/sendMessage'); -->
+	<form id="form_message">
+	  		<div class="form-group">		    
+		    <input type="email" id="input_email" placeholder="@Destinataire">
+		  </div>
+		  <div class="form-group">
+		    <input  type="text" class="form-control" id="input_titre" placeholder="Titre">
+		  </div>
+		  <div class="form-group">
+		    <input type="text" class="form-control" id="input_objet" placeholder="Object">
+		  </div>
+		  <div class="form-group">
+		  <textarea class="form-control" rows="5" id="input_message" placeholder="message"></textarea>
+		  </div>
+		  <button name="submit" id="btn_send_msg"class="btn btn-primary">Envoyé</button>
+	<!--//form_close(); -->
+</form>
+<div id="statut_send"></div>
+		<!-- Fin du btn -->
 	</section>
 </main>
 <?php $this->load->view('shared/footer'); ?>
@@ -44,35 +65,60 @@
 <script>
 $(document).ready(function(){
 
+$(function(){
+	$('#form_message').on('submit', function (e){
+		e.preventDefault();
+		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
+	})
+})
+	
+function sendFromMessage(destinataire,titre,objet,message)
+{
+	$.ajax({
+		url:"<?php echo base_url(); ?>messages/sendMessage",
+		method:"POST",
+		data:{destinataire:destinataire,
+			 titre:titre,
+			 objet:objet,
+			 message:message
+		},
+		//dataType: 'JSON',
+		success:function(data){
+			//$('#statut_send').empty();
+			$('#statut_send').html(data);
+			$('#statut_send').fadeIn();
+			$("#statut_send").fadeOut(2000, function() { $(this).empty();});
+		}
+	})
+	return false;
+}
  function load_data(id)
  {
   $.ajax({
    url:"<?php echo base_url(); ?>messages/fetch",
    method:"POST",
    data:{id:id},
-   success:function(data){
-    $('.corps-text-part').html(data);
+   dataType: 'JSON',
+   success:function(data){ 	
+    //$('.corps-text-part').html(data.id_expediteur);
+    $('#title').html(data.title);
+    $('#object').html(data.object);
+    $('#message').html(data.message);
    }
   })
  }
 
+	$('[id^=message_]').on('click',function(){
+		var id = $(this).attr('id').replace("message_","");
+		load_data(id);
+	});
+	/*
 
-$('[id^=message_]').on('click',function(){
-	var id = $(this).attr('id').replace("message_","");
-	load_data(id);
-});
-/*
- $('#search_text').keyup(function(){
-  var search = $(this).val();
-  if(search != '')
-  {
-   load_data(search);
-  }
-  else
-  {
-   load_data();
-  }
- });*/
+	$('#btn_send_msg').on('click', function(){
+		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
+	});
+	*/
+	
 });
 </script>
 

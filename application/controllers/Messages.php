@@ -7,6 +7,10 @@ class Messages extends CI_Controller
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model('message');
+		//chargement de la librairie pour la validation du formulaire
+  		$this->load->library('form_validation');
+  		//chargement du helper form
+  		$this->load->helper('form');
 	}
 
 	public function index()
@@ -33,30 +37,69 @@ class Messages extends CI_Controller
 		{
 			foreach ($message_result->result() as $row) {
 			
-			$output .= '
-			<div class="header">
-				<div id="title" class="expediteur">'.$row->id_expediteur.'</div>
-				<div id="object" class="title">Objet : '.$row->title.'</div>
-				<div class="repondre">Répondre</div>
-			</div>
-			<div id="message" class="message">'.$row->message.'</div>
-			<div class="reponse">
-				<div class="close-reponse">Retourner au message</div>
-				<form action="" type="POST">
-					<textarea id="" placeholder="Votre réponse.."></textarea>
-					<input type="file" multiple="multiple">
-					<button class="btn btn-outline-primary">Envoyer</button>
-				</form>
-			</div>';
+			$output = $row;
+
 			}
 		}
 		else
 		{
 			$output .= '<p> Pas de message trouvé</p>';
 		}
-		echo $output;
+		
+		echo json_encode($output);
 	}
 	
+
+	public function sendMessage()
+	{
+		$output ='';
+		$error ='<p>';
+		$destinataire ='';
+		$title = '';
+		$objet = '';
+		$message = '';
+
+		if($this->input->post('destinataire')){
+			$destinataire = $this->input->post('destinataire');			
+			if($this->input->post('objet'))
+			{
+				$objet = $this->input->post('objet');
+				if($this->input->post('message'))
+				{
+					$message = $this->input->post('message');
+					if($this->input->post('titre'))
+					{
+						$title = $this->input->post('titre');
+						$this->message->sendAMessage("1","2",$title,$objet,$message);
+						$error .= "Message envoyé";
+					}
+					else
+					{
+						$error .= "Titre vide";
+					}
+					
+					
+				}
+				else
+				{
+					$error .= "Message vide";
+				}
+
+			}
+			else
+			{
+				 $error .= "Objet manquant";
+			}
+		}
+		else
+		{
+			$error .= "Destinataire manquant";
+		}
+
+		//echo json_encode($output);
+		echo $error.'</p>';
+		
+	}
 
 
 }

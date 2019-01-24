@@ -21,16 +21,16 @@
 			<div class="right col-md-6">
 				<div class="identity">
 					<div class="names">
-						<p class="nom"><span>Nom :</span> {google.nom}</p>
-						<p class="prenom"><span>Prénom : </span>{google.prenom}</p>
+						<p class="nom"><span>Nom :</span> <?= $currentUser['last_name'] ?></p>
+						<p class="prenom"><span>Prénom : </span><?= $currentUser['first_name'] ?></p>
 					</div>
 					<hr>
-					<p class="job"><span>Métier </span> {user.métier}</p>
-					<p class="tarif"><span>Tarif/horaire :</span> {user.tarif}</p>
+					<p class="job"><span>Métier </span> <?= ' ' ?></p>
+					<p class="tarif"><span>Tarif/horaire :</span> <?= $currentUser['hourly_rate']; ?> €/h</p>
 					<p class="skill"><span>Compétences :</span> {user.skills}</p>
 					<p class="formation"><span>Formation :</span> {user.formation}</p>
 					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>
-					<p class="description"><span>Description :</span> {user.description}</p>
+					<p class="description"><span>Description :</span><?= $currentUser['description'] ?></p>
 					<!-- Cas : SI user sur son propre profil OU SI utilisateur qui n'a pas fait de projet avec OU SI utilisateur a déjà noté le profil -->
 					<div class="avis">
 						<img src="<?= base_url('assets/img/star.svg') ?>">

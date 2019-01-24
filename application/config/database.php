@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:host=localhost;port=8080;dbname=projetweb',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'root',
-	'database' => 'projetweb',
+	'password' => '',
+	'database' => 'loafreelance',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
