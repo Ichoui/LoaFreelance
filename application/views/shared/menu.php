@@ -12,19 +12,14 @@
 				<li class="nav-item" role="presentation">
 					<a class="nav-link" href="<?= base_url('projet') ?>" title="Vos projets">P</a>
 				</li>
-				<!-- Pour le role de Porteur de projet -->
-				<?php
-				if($_SESSION['isPorteurProjet'] == 1)
-				{
-					echo'
-					<li class="nav-item" role="presentation">
-						<a class="nav-link" href="<?= base_url(\'addprojet\') ?>" title="Ajouter un projet">Ajouter projet</a>
-					</li>';
-				}
-				?>
-				<!-- Pour le role de Free -->
 				<li class="nav-item" role="presentation">
-					<a class="nav-link" href="<?= base_url('consultprojet') ?>" title="Rechercher projets">Rechercher projet</a>
+						<a class="nav-link" href="<?= base_url('addprojet') ?>" title="Ajouter un projet">Ajouter projet</a>
+					</li>
+				<li class="nav-item" role="presentation">
+						<a class="nav-link" href="<?= base_url('consultfreelancer') ?>" title="Freelancers">Freelancers</a>
+				</li>
+				<li class="nav-item" role="presentation">
+							<a class="nav-link" href="<?= base_url('consultprojet') ?>" title="Rechercher projets">Rechercher projet</a>
 				</li>
 				<li class="nav-item" role="presentation">
 					<a class="nav-link" href="<?= base_url('messages') ?>" title="Votre boite mail">Messagerie</a>

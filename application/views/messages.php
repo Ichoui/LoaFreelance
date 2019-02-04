@@ -5,6 +5,7 @@
 	<section class="container">
 		<div class="email-part">
 			<?php
+				$HasResults = FALSE;
 				foreach ($messages as $row) {
 
 					$date = new DateTime($row->date_send);					
@@ -13,6 +14,11 @@
 						 	<div class="expediteur">'.$row->first_name.' '.$row->last_name.' | '.$date->format('d/m/Y H:i').'</div>
 						    <div class="title">'.$row->title.'</div>
 						 </div>';
+						 $HasResults = TRUE;
+				}
+				if($HasResults == FALSE)
+				{
+					echo'<p>Boite mail vide</p>';
 				}
 			?>
 		</div>

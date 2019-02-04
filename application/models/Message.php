@@ -17,7 +17,7 @@ class Message extends CI_Model
   	return $query->result();
   }
 
-  public function getUserMessage()
+  public function getUserMessage($id)
   {
     //$query = $this->db->order_by('date_send', 'ASC')->get_where('interne_message',array('id_destinataire' => 2));
     //$query = $this->db->get_where('interne_message',array('date_send' => 2));
@@ -30,7 +30,7 @@ class Message extends CI_Model
     $this->db->select('first_name');
     $this->db->select('last_name');
     $this->db->join('users','users.id = interne_message.id_expediteur');
-    $query = $this->db->order_by('date_send', 'DESC')->get_where('interne_message',array('id_destinataire' => 2));
+    $query = $this->db->order_by('date_send', 'DESC')->get_where('interne_message',array('id_destinataire' => $id));
 
     return $query->result();
   }

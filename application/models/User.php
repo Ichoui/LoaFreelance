@@ -56,4 +56,20 @@ class User extends CI_Model
 
   }
 
+  public function fetch_data($query)
+  {
+    $this->db->select("*");
+    //$this->db->from("users");
+    if($query != '')
+    {
+     $this->db->like('first_name', $query);
+     $this->db->or_like('last_name', $query);
+     $this->db->or_like('email', $query);
+     $this->db->or_like('intern_email', $query);
+     $this->db->or_like('locale', $query);
+    }
+    //$this->db->order_by('date_creation','DESC');
+    return $this->db->get_where('users',array('users.isPorteurProjet' => 0));
+  }
+
 }

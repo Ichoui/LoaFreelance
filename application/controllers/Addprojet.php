@@ -26,12 +26,18 @@ class Addprojet extends CI_Controller
 			$description = $this->input->post('description');
 			$skills = $this->input->post('skills');
 
+			$str_skills = '';
+		    foreach($skills as $a_skill)
+		    {
+		      $str_skills .= $a_skill.' ';
+		    }
 			//push into DB
-			$this->project->addProjet($title_proj,$description,$skills);
+			$this->project->addProjet($title_proj,$description,$str_skills);
 
 			$this->data['title_proj'] = $title_proj;
 			$this->data['tarif_horaire'] = $tarif_horaire;
 			$this->data['description'] = $description;
+			$this->data['competences'] = $str_skills;
 			$this->load->view('addprojet',$this->data);	
 	}
 }

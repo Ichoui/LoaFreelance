@@ -9,6 +9,7 @@ class Projet extends CI_Controller
 		$this->load->helper('url');
 		$this->load->model('project');
 		$this->load->model('user');
+		$this->load->model('candidate_project');
 		//chargement de la librairie pour la validation du formulaire
   		$this->load->library('form_validation');
   		//chargement du helper form
@@ -44,7 +45,9 @@ class Projet extends CI_Controller
 					$data['first_name'] = $a_porteur_projet->first_name;
 					$data['last_name'] = $a_porteur_projet->last_name;
 					$data['email'] = $a_porteur_projet->intern_email;
-				}
+				}				
+					$data['freelancer_inscrit'] = $this->candidate_project->getFreelancersInscritSurUnProjetByIdProjet($data['id']);
+				
 			}
 			else
 			{
