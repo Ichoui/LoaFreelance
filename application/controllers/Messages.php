@@ -16,7 +16,7 @@ class Messages extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'messages' => $this->message->getUserMessage()
+			'messages' => $this->message->getUserMessage($_SESSION['id'])
 		];
 		//var_dump($data);
 		$this->load->view('messages',$data);

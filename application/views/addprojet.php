@@ -47,6 +47,9 @@
 						echo "<div id='result_description'>";
 						echo "<strong><label class='label_output'>Description Projet : </label></strong>". " ".$description;
 						echo "</div>";
+						echo "<div id='result_skills'>";
+						echo "<strong><label class='label_output'>Skills : </label></strong>". " ".$competences;
+						echo "</div>";
 						echo "</div>";
 					} 
 

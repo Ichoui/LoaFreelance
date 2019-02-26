@@ -22,7 +22,6 @@ class Login extends CI_Controller
 	public function connexion() {
 
 		$login = $this->user->get_connected_user();
-
 		if(!empty($login)) {
 			$this->session->set_userdata($login);
 			redirect('profile');

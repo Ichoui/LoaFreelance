@@ -3,6 +3,7 @@
 
 <main class="page projet">
 	<section class="container">
+    <?php var_dump($freelancer_inscrit->result()); ?>
 		<h1 class="main-title"><?php echo $title; ?></h1>
 		<div class="about-projet">
 			<div class="description"><span>Description :</span><?php echo $description; ?>

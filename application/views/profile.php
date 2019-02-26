@@ -1,6 +1,7 @@
 <?php $this->load->view('shared/header'); ?>
 <?php $this->load->view('shared/menu'); ?>
-
+<?php //var_dump($currentUser);
+//var_dump($allProject);?>
 <main class="page profile ">
 	<!--	 BOUTONS SWITCH-->
 	<ul class="nav nav-tabs switch">
@@ -8,10 +9,19 @@
 			<a class="nav-link switcher profil active" href="#">Profil</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link switcher portfollio" href="#">Portfollio</a>
+			<a class="nav-link switcher portfollio" href="#"><?php 
+		if($_SESSION['isPorteurProjet'] == 0)
+		{
+			echo "PortFolio";
+		}
+		else
+		{
+			echo "Mes Projets";
+		}
+		?></a>
 		</li>
 	</ul>
-
+	<?php // var_dump($_SESSION); ?>
 	<!-- SECTION USER PROFIL-->
 	<section class="user-profil container">
 		<div class="row">
@@ -135,41 +145,36 @@
 			</div>
 		</div>
 	</section>
+
 	<!--	 SECTION PORTFOLLIO-->
 	<section class="user-porfollio container">
-		<h1 class="text-center">Portfollio</h1>
-		<p class="text-center">Vous trouverez ici une liste de tous les projets complété par {user.nom & prenom}</p>
+		<h1 class="text-center">Mes Projets</h1>
+
+		<?php 
+		/*
+		if($_SESSION['isPorteurProjet'] == 0)
+		{
+			echo '<p class="text-center">Vous trouverez ici une liste de tous les projets réalisés par '.$_SESSION['first_name'].' '.$_SESSION['last_name'].'</p>';
+		}
+		else
+		{
+			echo '<p class="text-center">Vous trouverez ici une liste de tous les projets portés par '.$_SESSION['first_name'].' '.$_SESSION['last_name'].'</p>';
+		}
+		*/
+		?>
 		<div class="block-projets">
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
-			<div class="projet">
-				<h2 class="nom-projet">Projet A</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, odio. </p>
-				<a href="<?= base_url('projet') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
-			</div>
+			<?php 
+			//var_dump($allProject);
+
+				foreach ($allProject as $project) {
+				echo '
+				<div class="projet">
+					<h2 class="nom-projet">'.$project->name.'</h2>
+					<p>'.$project->description.'</p>
+					<a href="<?= base_url(\'projet\') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				</div>';
+			}
+			?>
 		</div>
 	</section>
 </main>
