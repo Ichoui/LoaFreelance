@@ -8,10 +8,6 @@
 				<li class="nav-item" role="presentation">
 					<a class="nav-link" href="<?= base_url('accueil') ?>" title="Accueil">Accueil</a>
 				</li>
-				<!--				 Doit disparaitre -->
-				<li class="nav-item" role="presentation">
-					<a class="nav-link" href="<?= base_url('projet') ?>" title="Vos projets">P</a>
-				</li>
 				<li class="nav-item" role="presentation">
 						<a class="nav-link" href="<?= base_url('addprojet') ?>" title="Ajouter un projet">Ajouter projet</a>
 					</li>
