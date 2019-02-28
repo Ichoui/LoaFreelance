@@ -20,8 +20,11 @@ class Formation extends CI_Model
   public function getByUserId($userId) {
 
     $this->db->select('*');
-    $this->db->from('formation')
-    $this->db->join('users_formation', 'users_formation.user_id = ')
-    $query = $this->db->get()
+    $this->db->from('formation');
+    $this->db->join('users_formation', 'users_formation.formation_id = formation.id');
+    $this->db->where('users_formation.user_id = ?', [$userId]);
+    $query = $this->db->get();
+
+    return $query->result();
   }
 }
