@@ -19,7 +19,8 @@ public function __construct(){
 
 		$data = [
 			'currentUser' => $this->session->userdata(),
-			'allProject' => $this->project->getProjectByUserId($currentUser['id'])
+			'allProject' => $this->project->getProjectByUserId($currentUser['id']),
+			'formations' => $this->formation->getByUserId($currentUser['id']),
 		];
 
 		$this->load->view('profile',$data);

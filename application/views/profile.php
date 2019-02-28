@@ -9,7 +9,7 @@
 			<a class="nav-link switcher profil active" href="#">Profil</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link switcher portfollio" href="#"><?php 
+			<a class="nav-link switcher portfollio" href="#"><?php
 		if($_SESSION['isPorteurProjet'] == 0)
 		{
 			echo "PortFolio";
@@ -43,7 +43,13 @@
 							<p> - <?= $skill ?></p>
 					  <?php endforeach; ?>
 					</p>
-					<p class="formation"><span>Formation :</span> {user.formation}</p>
+					<p class="formation"><span>Formation :</span>
+						<ul>
+							<?php foreach($formations as $formation): ?>
+									<li> <?= $formation ?> </li>
+							<?php endforeach; ?>
+						</ul> 
+					</p>
 					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>
 					<p class="description"><span>Description :</span><?= $currentUser['description'] ?></p>
 					<!-- Cas : SI user sur son propre profil OU SI utilisateur qui n'a pas fait de projet avec OU SI utilisateur a déjà noté le profil -->
@@ -150,7 +156,7 @@
 	<section class="user-porfollio container">
 		<h1 class="text-center">Mes Projets</h1>
 
-		<?php 
+		<?php
 		/*
 		if($_SESSION['isPorteurProjet'] == 0)
 		{
@@ -163,7 +169,7 @@
 		*/
 		?>
 		<div class="block-projets">
-			<?php 
+			<?php
 			//var_dump($allProject);
 
 				foreach ($allProject as $project) {
