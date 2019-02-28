@@ -22,7 +22,7 @@ class Formation extends CI_Model
     $this->db->select('*');
     $this->db->from('formation');
     $this->db->join('users_formation', 'users_formation.formation_id = formation.id');
-    $this->db->where('users_formation.user_id = ?', [$userId]);
+    $this->db->where('user_id', $userId);
     $query = $this->db->get();
 
     return $query->result();

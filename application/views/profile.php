@@ -46,9 +46,9 @@
 					<p class="formation"><span>Formation :</span>
 						<ul>
 							<?php foreach($formations as $formation): ?>
-									<li> <?= $formation ?> </li>
+									<li> <?= $formation->libelle_formation ?> </li>
 							<?php endforeach; ?>
-						</ul> 
+						</ul>
 					</p>
 					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>
 					<p class="description"><span>Description :</span><?= $currentUser['description'] ?></p>
