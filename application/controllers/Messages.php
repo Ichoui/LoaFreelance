@@ -70,7 +70,7 @@ class Messages extends CI_Controller
 					if($this->input->post('titre'))
 					{
 						$title = $this->input->post('titre');
-						$this->message->sendAMessage("1","2",$title,$objet,$message);
+						$this->message->sendAMessage($_SESSION['id'],$this->message->getIdUserByEmail($this->input->post('destinataire')),$title,$objet,$message);
 						$error .= "Message envoyé";
 					}
 					else

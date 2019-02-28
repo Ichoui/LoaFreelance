@@ -17,13 +17,42 @@ class Candidate_project extends CI_Model
   	return $query->result();
   }
 
+  public function newCandidature($iduser,$idprojet,$msg)
+  {
+    $data = array(
+        'id_projet' => $idprojet,
+        'id_user' => $iduser,
+        'statut' => "CANDIDATE",
+        'msg' => $msg
+    );
+    $this->db->insert('candidate_project', $data);
+  }
+  public function updateStatut($iduser,$idprojet)
+  {
+    $this->db->set('statut', 'VALIDATE');
+    $this->db->where('id_projet', $idprojet);
+    $this->db->where('id_user', $iduser);
+    $this->db->update('candidate_project');
+  }
   public function getFreelancersInscritSurUnProjetByIdProjet($id)
   {
       $this->db->select('*');
       $this->db->from('users as us');
       $this->db->join('candidate_project as cp', 'us.id = cp.id_user');
-      return $this->db->get_where('candidate_project',array('cp.id_projet'=>$id));      
+      $this->db->where('id_projet',$id);
+      $this->db->where('statut',"VALIDATE");
+      return $this->db->get();
   }
+
+    public function getFreelancersCandidateSurUnProjetByIdProjet($id)
+    {
+      $this->db->select('*');
+      $this->db->from('users as us');
+      $this->db->join('candidate_project as cp', 'us.id = cp.id_user');
+      $this->db->where('id_projet',$id);
+      $this->db->where('statut',"CANDIDATE");
+      return $this->db->get();
+    }
 
   public function fetch_data($query)
   {
