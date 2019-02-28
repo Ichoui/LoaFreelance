@@ -7,6 +7,7 @@ class Profile extends CI_Controller
 public function __construct(){
 		 parent::__construct();
 		 $this->load->helper('url');
+     $this->load->model('formation');
 		$this->load->model('project');
 	}
 	public function index()
@@ -18,7 +19,8 @@ public function __construct(){
 
 		$data = [
 			'currentUser' => $this->session->userdata(),
-			'allProject' => $this->project->getProjectByUserId($currentUser['id'])
+			'allProject' => $this->project->getProjectByUserId($currentUser['id']),
+			'formations' => $this->formation->getByUserId($currentUser['id']),
 		];
 
 		$this->load->view('profile',$data);
