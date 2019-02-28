@@ -5,6 +5,7 @@
 	<section class="container">
 		<div class="add-projet">
 			<!--<form action="" type="POST">-->
+					<?php echo $_SESSION['id'];?>
 				<?php 
 					echo form_open('Addprojet/data_submitted');
 					echo '<label for="title-proj">Titre du projet :</label>';

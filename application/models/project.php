@@ -22,9 +22,35 @@ class Project extends CI_Model
   	return $query->result();
   }
 
+  public function getProjectBystatutOrderByASC()
+  {
+    $query = $this->db->order_by('date_creation', 'ASC')->get_where('project',array('statut'=>"IN_SEARCH"));
+    return $query->result();
+  }
+
   public function getProjectById($id)
   {
     return $this->db->get_where('project',array('id'=>$id));
+  }
+
+  public function updateStatutProject($idProjet)
+  {
+    $data = array(
+        'statut' => 'RUNNING'
+    );
+    $this->db->where('id', $idProjet);
+    $this->db->update('project',$data);
+
+  }
+
+  public function updateStatutProjectClose($idProjet)
+  {
+    $data = array(
+        'statut' => 'CLOSED'
+    );
+    $this->db->where('id', $idProjet);
+    $this->db->update('project',$data);
+
   }
 
   public function fetch_data($query)
@@ -39,6 +65,16 @@ class Project extends CI_Model
   	}
   	//$this->db->order_by('date_creation','DESC');
   	return $this->db->get();
+  }
+
+  public function getPorteurDuProjet($idProjet)
+  {
+      $this->db->select('first_name');
+      $this->db->select('last_name');
+      $this->db->select('intern_email');
+      $this->db->from('users as us');
+      $this->db->join('project as p', 'us.id = p.le_porteur_du_projet');
+      return $this->db->get_where('project',array('p.id'=>$idProjet));
   }
 
   public function addProjet($name, $description, $skills)

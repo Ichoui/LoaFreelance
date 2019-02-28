@@ -77,11 +77,7 @@ $db['default'] = array(
 	'dsn'	=> 'mysql:host=localhost;port=8080;dbname=projetweb',
 	'hostname' => 'localhost',
 	'username' => 'root',
-<<<<<<< HEAD
 	'password' => '',
-=======
-	'password' => 'root',
->>>>>>> 1615452410cfdb34eecb26c2580cd6fffdac2317
 	'database' => 'projetweb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

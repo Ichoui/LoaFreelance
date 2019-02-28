@@ -1,9 +1,11 @@
 <?php $this->load->view('shared/header'); ?>
 <?php $this->load->view('shared/menu'); ?>
 
+
 <body style="overflow: hidden;">
 <main class="page accueil">
 	<!--	Visible que par le freelancer -->
+
 	<section class="clean-block clean-hero freelancer-part">
 		<div class="container-text">
 			<h1>Postuler à des projets</h1>
@@ -12,18 +14,16 @@
 			<p>Quelqu'un a besoin de vous ! Voici une pré-sélection de projets qui pourraient vous intéresser</p>
 
 			<ul class="point-interet">
-				<li>
-					<a href="<?= base_url('projet') ?>">Projet A - <span>{description-projet-abcdefgb}</span></a>
-				</li>
-				<li>
-					<a href="<?= base_url('projet') ?>">Projet B - <span>{description-projet-abcdefgb}</span></a>
-				</li>
-				<li>
-					<a href="<?= base_url('projet') ?>">Projet C - <span>{description-projet-abcdefgb}</span></a>
-				</li>
-				<li>
-					<a href="<?= base_url('projet') ?>">Projet D - <span>{description-projet-abcdefgb}</span></a>
-				</li>
+				<?php
+
+					foreach ($last_project as $a_projet) {
+						echo'
+						<li>
+							<a href="'.base_url('projet').'">'.$a_projet->name.' - <span>'.$a_projet->description.' '.$a_projet->contrainte_tech.'</span></a>
+						</li>
+						';
+					}
+				?>
 			</ul>
 			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('consultprojet') ?>">Chercher un projet</a>
 		</div>

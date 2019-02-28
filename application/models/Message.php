@@ -29,7 +29,7 @@ class Message extends CI_Model
     $this->db->select('isRead');
     $this->db->select('first_name');
     $this->db->select('last_name');
-    $this->db->join('users','users.id = interne_message.id_expediteur');
+    $this->db->join('users','users.id = interne_message.id_destinataire');
     $query = $this->db->order_by('date_send', 'DESC')->get_where('interne_message',array('id_destinataire' => $id));
 
     return $query->result();
@@ -52,6 +52,15 @@ class Message extends CI_Model
     );
 
     $this->db->insert('interne_message',$data);
+  }
+
+  public function getIdUserByEmail($email)
+  {
+    $this->db->select('id');
+    $query = $this->db->get_where('users', array('intern_email' => $email));
+    $ret = $query->row();
+    return $ret->id;
+
   }
 
   

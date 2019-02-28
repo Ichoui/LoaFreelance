@@ -6,6 +6,7 @@
 		<div class="email-part">
 			<?php
 				$HasResults = FALSE;
+				
 				foreach ($messages as $row) {
 
 					$date = new DateTime($row->date_send);					
@@ -71,6 +72,38 @@
 <script>
 $(document).ready(function(){
 
+$('#form_message').submit(function(event) {
+                     
+               var formData = {
+                   'destinataire'              : $('#input_email').val(),
+                   'titre'                     : $('#input_titre').val(),
+                   'objet'                     : $('#input_objet').val(),
+                   'message'				   : $('#input_message').val()
+               };
+   
+               // process the form
+               $.ajax({
+                   type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                   url         : "<?php echo base_url();?>" + "messages/sendMessage", // the url where we want to POST
+                   data        : formData, // our data object
+                   dataType    : 'json', // what type of data do we expect back from the server
+                   encode      : true
+               })
+                   // using the done promise callback
+                   .done(function(data) {
+   
+                       // log data to the console so we can see
+                       console.log(data); 
+   
+                       // here we will handle errors and validation messages
+                   });
+   
+               // stop the form from submitting the normal way and refreshing the page
+               event.preventDefault();
+    
+		});
+});
+      /*
 $(function(){
 	$('#form_message').on('submit', function (e){
 		e.preventDefault();
@@ -81,7 +114,7 @@ $(function(){
 function sendFromMessage(destinataire,titre,objet,message)
 {
 	$.ajax({
-		url:"<?php echo base_url(); ?>messages/sendMessage",
+		url:"<?php //echo base_url(); ?>messages/sendMessage",
 		method:"POST",
 		data:{destinataire:destinataire,
 			 titre:titre,
@@ -101,7 +134,7 @@ function sendFromMessage(destinataire,titre,objet,message)
  function load_data(id)
  {
   $.ajax({
-   url:"<?php echo base_url(); ?>messages/fetch",
+   url:"<?php //echo base_url(); ?>messages/fetch",
    method:"POST",
    data:{id:id},
    dataType: 'JSON',
@@ -118,14 +151,14 @@ function sendFromMessage(destinataire,titre,objet,message)
 		var id = $(this).attr('id').replace("message_","");
 		load_data(id);
 	});
-	/*
+	
 
 	$('#btn_send_msg').on('click', function(){
 		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
 	});
-	*/
 	
-});
+	*/
+
 </script>
 
 

@@ -20,12 +20,17 @@
 			echo"<div class=\"projet\">";
 				echo "<h2 class=\"nom-projet\">".$prj->name."</h2>";
 				echo "<p>".$prj->description."</p>";
-				echo "<a href=\"<?= base_url('projet') ?>\" class=\"btn btn-outline-primary\" target=\"_blank\">Accéder</a>";
+				echo "<a href=\"<?= base_url('projet/getProject') ?>\" class=\"btn btn-outline-primary\" target=\"_blank\">Accéder</a>";
 				echo "</div>";
 		}
+
+
+
 	*/?>
+
 		</div>
 	</section>
+
 </main>
 <?php $this->load->view('shared/chat-window'); ?>
 <?php $this->load->view('shared/footer'); ?>
