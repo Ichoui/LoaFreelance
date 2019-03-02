@@ -103,7 +103,6 @@ $('#form_message').submit(function(event) {
     
 		});
 });
-      /*
 $(function(){
 	$('#form_message').on('submit', function (e){
 		e.preventDefault();
@@ -157,7 +156,6 @@ function sendFromMessage(destinataire,titre,objet,message)
 		sendFromMessage($('#input_email').val(),$('#input_titre').val(),$('#input_objet').val(),$('#input_message').val());
 	});
 	
-	*/
 
 </script>
 
