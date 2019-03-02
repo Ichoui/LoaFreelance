@@ -16,7 +16,7 @@
 	  overflow: auto;
 	  @include breakpoint(col-exsm) {
 		width: 100%;
-		height: 20vh;
+		height: 35vh;
 	  }
 	  .mail {
 		border: 1px solid $orange;
@@ -47,8 +47,11 @@
 	  padding: 5px;
 	  @include breakpoint(col-exsm) {
 		width: 100%;
-		height: 70vh;
+		//height: 40vh;
 		margin-top: 5px;
+		max-height: 40vh;
+		margin-top: 5px;
+		height: auto;
 	  }
 	  .header {
 		height: auto;
@@ -77,6 +80,9 @@
 		height: 80%;
 		overflow: auto;
 		margin-top: 10px;
+	  @include breakpoint(col-exsm) {
+		height: 100%;
+	  }
 	  }
 	  .reponse {
 		display: none;
@@ -101,4 +107,22 @@
 	  }
 	}
   }
+  .form-sender {
+	width: 30%;
+	@include breakpoint(col-exsm) {
+	  width: 100%;
+	  height: auto;	}
+  }
+  .dno {
+	display:none;
+  }
+  #closeform {
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-style: italic;
+	&:hover {
+	  cursor: pointer;
+	}
+  }
 }
+

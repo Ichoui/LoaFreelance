@@ -4,6 +4,7 @@
 <main class="page landing-page messages">
 	<section class="container">
 		<div class="email-part">
+			<a href="#" id="send-new-msg" class="btn btn-outline-primary" style="margin-bottom: 20px;">Envoyer un message</a>
 			<?php
 			$HasResults = FALSE;
 
@@ -11,14 +12,20 @@
 
 				$date = new DateTime($row->date_send);
 
-				echo '<div id="message_' . $row->id . '" class="mail">
-						 	<div class="expediteur">' . $row->first_name . ' ' . $row->last_name . ' | ' . $date->format('d/m/Y H:i') . '</div>
+				echo '<div id="message_' . $row->id . '" class="mail" data-mail="">
+						 	<div class="expediteur" 
+						 	data-firstname="' . $row->first_name . '" 
+						 	data-lastname="' . $row->last_name . '">
+								' . $row->first_name . ' ' .
+								$row->last_name . ' | ' .
+								$date->format('d/m/Y H:i') . '
+							</div>
 						    <div class="title">' . $row->title . '</div>
 						 </div>';
 				$HasResults = TRUE;
 			}
 			if ($HasResults == FALSE) {
-				echo '<p>Boite mail vide</p>';
+				echo '<div class="mail">Boite mail vide</div>';
 			}
 			?>
 		</div>
@@ -27,11 +34,10 @@
 			<div class="header">
 				<div id="title" class="expediteur"></div>
 				<div id="object" class="title"></div>
-				<div class="repondre">Répondre</div>
+				<div id="repondre" class="repondre">Répondre</div>
 			</div>
 			<div id="message" class="message"></div>
 			<div class="reponse">
-				<div class="close-reponse">Retourner au message</div>
 				<form id="form_response" action="" type="POST">
 					<textarea id="" placeholder="Votre réponse.."></textarea>
 					<input type="file" multiple="multiple">
@@ -40,28 +46,30 @@
 			</div>
 		</div>
 
-
-		<!-- Ecrire un nouveau message à designer :p -->
-		<?php
-		echo form_open('messages/sendMessage');
-		echo '<form id="form_message">';
-		echo '<div class="form-group">		 ';
-		echo '<input type="email" id="input_email" placeholder="@Destinataire">';
-		echo '</div>';
-		echo '<div class="form-group">';
-		echo '<input  type="text" class="form-control" id="input_titre" placeholder="Titre">';
-		echo '</div>';
-		echo '<div class="form-group">';
-		echo '  <input type="text" class="form-control" id="input_objet" placeholder="Object">';
-		echo '</div>';
-		echo '<div class="form-group">';
-		echo ' <textarea class="form-control" rows="5" id="input_message" placeholder="message"></textarea>';
-		echo ' </div>';
-		echo ' <button name="submit" id="btn_send_msg" class="btn btn-outline-primary">Envoyé</button>';
-		echo '</form>';
-		form_close(); ?>
-		<div id="statut_send"></div>
-		<!-- Fin du btn -->
+		<div class="form-sender dno">
+			<!-- Ecrire un nouveau message à designer :p -->
+			<?php
+			echo form_open('messages/sendMessage');
+			echo '<form id="form_message">';
+			echo '<div id="closeform">Fermer</div>';
+			echo '<div class="form-group">		 ';
+			echo '<input type="email" id="input_email" class="form-control" placeholder="@Destinataire">';
+			echo '</div>';
+			echo '<div class="form-group">';
+			echo '<input  type="text" class="form-control" id="input_titre" placeholder="Titre">';
+			echo '</div>';
+			echo '<div class="form-group">';
+			echo '  <input type="text" class="form-control" id="input_objet" placeholder="Object">';
+			echo '</div>';
+			echo '<div class="form-group">';
+			echo ' <textarea class="form-control" rows="5" id="input_message" placeholder="message"></textarea>';
+			echo ' </div>';
+			echo ' <button name="submit" id="btn_send_msg" class="btn btn-outline-primary">Envoyé</button>';
+			echo '</form>';
+			form_close(); ?>
+			<div id="statut_send"></div>
+			<!-- Fin du btn -->
+		</div>
 	</section>
 </main>
 <?php $this->load->view('shared/footer'); ?>
@@ -143,6 +151,9 @@
 				$('#title').html(data.title);
 				$('#object').html(data.object);
 				$('#message').html(data.message);
+				var firstname = $('.expediteur').data('firstname').toLowerCase();
+				var lastname = $('.expediteur').data('lastname').toLowerCase();
+				$('#repondre').attr("data-email", firstname + '.' + lastname + '@freelancer.com');
 			}
 		})
 	}
@@ -157,6 +168,19 @@
 		sendFromMessage($('#input_email').val(), $('#input_titre').val(), $('#input_objet').val(), $('#input_message').val());
 	});
 
+	$('#send-new-msg').on('click', function () {
+		$('.form-sender').removeClass('dno');
+	});
+
+	$('.repondre').on('click', function () {
+		var mail = $('#repondre').data('email');
+		$('.form-sender').removeClass('dno');
+		$('#input_email').val(mail)
+	});
+
+	$('#closeform ').on('click', function() {
+		$('.form-sender').addClass('dno');
+	})
 
 </script>
 
