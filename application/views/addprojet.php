@@ -17,11 +17,11 @@
 					echo form_input($title_projet);
 
 					echo '<label for="tarif-proj">Tarif horaire (euros / heure)</label>';
-					echo '<input type="number" step=\'1\' id="tarif-proj" name="tarif_horaire" placeholder="Tarif / horaire du projet...">';
+					echo '<input type="number" step=\'1\' id="tarif-proj" name="tarif_horaire" class="form-control" placeholder="Tarif / horaire du projet...">';
 					echo '<label for="desc-proj">Description du projet</label>';
-					echo '<textarea name="description" type="text" id="desc-projet" placeholder="Description du projet..."></textarea>';
+					echo '<textarea name="description" type="text" id="desc-projet" class="form-control" placeholder="Description du projet..."></textarea>';
 					echo '<label for="skills-proj">Compétences recherchées</label>';
-					echo '<select name="skills[]" multiple>';
+					echo '<select name="skills[]" class=""form-control"  multiple>';
 
 					foreach ($skills as $option) {
 							echo "<option value=".$option->skills_name.">".$option->skills_name."</option>";

@@ -2,10 +2,8 @@
 <?php $this->load->view('shared/menu'); ?>
 
 
-<body style="overflow: hidden;">
+<body >
 <main class="page accueil">
-	<!--	Visible que par le freelancer -->
-
 	<section class="clean-block clean-hero">
 		<div class="container-text">
 			<h1>Postuler à des projets</h1>
@@ -28,6 +26,8 @@
 			</ul>
 			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('consultprojet') ?>">Chercher un projet</a>
 			<hr>
+			<h1>Cherchez le Freelanceur idéal <br>pour votre projet</h1>
+			<p>Voici les derniers utilisateurs inscrits sur notre plateforme :</p>
 				<ul class="point-interet">
 				<?php
 

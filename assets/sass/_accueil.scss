@@ -22,6 +22,9 @@
 		border-radius: 5px;
 		max-height: 250px;
 		overflow: auto;
+		@include breakpoint(col-exsm) {
+		  width: 100%;
+		}
 		li {
 		  list-style-type: none;
 		  height: 25px;
