@@ -12,18 +12,8 @@
   	 </div>
 		<!--Fin barre de recherche -->
 		<div class="consult-projet">
-		<!-- Boucle affichage des projets-->
+		<!-- Boucle affichage des freelancers-->
 		
-		<?php
-		/*
-		foreach ($project as $prj) {
-			echo"<div class=\"projet\">";
-				echo "<h2 class=\"nom-projet\">".$prj->name."</h2>";
-				echo "<p>".$prj->description."</p>";
-				echo "<a href=\"<?= base_url('projet') ?>\" class=\"btn btn-outline-primary\" target=\"_blank\">Accéder</a>";
-				echo "</div>";
-		}
-	*/?>
 		</div>
 	</section>
 </main>

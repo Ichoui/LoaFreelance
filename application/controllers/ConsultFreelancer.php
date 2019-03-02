@@ -38,7 +38,7 @@ class Consultfreelancer extends CI_Controller
 				$output .= '
 				<div id ="'.$row->id.'"class="projet">
 				<h2 class="nom-projet">'.$row->first_name.' '.$row->last_name.'</h2>
-				<p>'.$row->intern_email.'</p>
+				<p style="text-overflow: ellipsis; overflow: hidden; font-size: .8em; text-align: center">'.$row->intern_email.'</p>
 				<p>'.$row->locale.'</p>
 
 				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Profil</a>
