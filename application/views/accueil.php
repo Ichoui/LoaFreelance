@@ -6,7 +6,7 @@
 <main class="page accueil">
 	<!--	Visible que par le freelancer -->
 
-	<section class="clean-block clean-hero freelancer-part">
+	<section class="clean-block clean-hero">
 		<div class="container-text">
 			<h1>Postuler à des projets</h1>
 			<p>Plateforme collaborative de A à Z &nbsp;:<br>mise en relation jusqu'au suivi des réalisations et des
@@ -19,43 +19,29 @@
 					foreach ($last_project as $a_projet) {
 						echo'
 						<li>
-							<a href="'.base_url('projet').'">'.$a_projet->name.' - <span>'.$a_projet->description.' '.$a_projet->contrainte_tech.'</span></a>
+							<a href="'.base_url('projet').'">'.$a_projet->name.' - <span>'.$a_projet->description.' | Compétences : '.$a_projet->contrainte_tech
+							.'</span></a>
 						</li>
 						';
 					}
 				?>
 			</ul>
 			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('consultprojet') ?>">Chercher un projet</a>
-		</div>
-	</section>
+			<hr>
+				<ul class="point-interet">
+				<?php
 
-	<!--	Visible que par le recruteur-->
-	<!--	<section class="clean-block clean-hero recruteur-part">
-		<div class="container-text">
-			<h1>Cherchez le Freelanceur idéal <br>pour votre projet</h1>
-			<p>Plateforme collaborative de A à Z&nbsp;:<br>mise en relation jusqu'au suivi des réalisations et des
-				paiements d'un projet.</p>
-			<p>Voici les derniers utilisateurs inscrits sur notre plateforme :</p>
-			<ul class="list-new-free">
-				<li>
-					<a href="<?= base_url('profile') ?>">Stéphane Tartidou - {5}</a>
-					<img src="<?= base_url('assets/img/star.svg') ?>">
-				</li>
-				<li>
-					<a href="<?= base_url('profile') ?>">Eude Le Petit - {5}</a>
-					<img src="<?= base_url('assets/img/star.svg') ?>">
-				</li>
-				<li>
-					<a href="<?= base_url('profile') ?>">Michel Vedette - {5} </a>
-					<img src="<?= base_url('assets/img/star.svg') ?>">
-				</li>
-				<li>
-					<a href="<?= base_url('profile') ?>">Bertrand Quichaud - {5}</a>
-					<img src="<?= base_url('assets/img/star.svg') ?>">
-				</li>
+				foreach ($last_free as $free) {
+					echo '
+						<li>
+							<a href="'.base_url('profile').'">'.$free->first_name.' '.$free->last_name.'  <span></a>
+						</li>
+						';
+				}
+				?>
 			</ul>
 		</div>
-	</section>-->
+	</section>
 </main>
 
 <?php $this->load->view('shared/chat-window'); ?>

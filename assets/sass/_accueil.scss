@@ -12,7 +12,7 @@
 		padding-top: 20px;
 	  }
 	  ul.point-interet {
-		width: 350px;
+		width: 50vw;
 		margin: 0 auto 15px;
 		text-align: left;
 		font-weight: bold;
@@ -21,7 +21,7 @@
 		padding: 10px 20px;
 		border-radius: 5px;
 		max-height: 250px;
-		overflow: hidden;
+		overflow: auto;
 		li {
 		  list-style-type: none;
 		  height: 25px;
@@ -41,9 +41,5 @@
 		}
 	  }
 	}
-  }
-  section.recruteur-part {
-  }
-  section.freelancer-part {
   }
 }

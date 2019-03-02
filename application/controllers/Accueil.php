@@ -7,14 +7,16 @@ class Accueil extends CI_Controller
 		 parent::__construct();
 		
 		$this->load->model('project');
-		$this->load->helper('url');		
+		$this->load->model('User');
+		$this->load->helper('url');
 	}
 
 	public function index()
 	{
 		$this->load->helper('url');
 		$data = array(
-			'last_project' => $this->project->getProjectBystatutOrderByASC()
+			'last_project' => $this->project->getProjectBystatutOrderByASC(),
+			'last_free' => $this->User->getAllFree()
 		);
 
 		$this->load->view('accueil',$data);
