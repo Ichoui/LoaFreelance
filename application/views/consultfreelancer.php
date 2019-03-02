@@ -4,9 +4,9 @@
 <main class="page projet">
 	<section class="container">
 		<!--Barre de recherche pour moteur-->
-		<div class="form-group">
+		<div class="form-group" style="margin-top: 15px;">
     		<div class="input-group">
-     		<span class="input-group-addon"></span>
+				<span class="input-group-addon" style="padding-right: 10px;">Rechercher</span>
      		<input type="text" name="search_text" id="search_text" placeholder="Rechercher un freelancer #KeyWord" class="form-control" />
     	</div>
   	 </div>
