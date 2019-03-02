@@ -15,7 +15,6 @@
 		<!-- Boucle affichage des projets-->
 		
 		<?php
-		/*
 		foreach ($project as $prj) {
 			echo"<div class=\"projet\">";
 				echo "<h2 class=\"nom-projet\">".$prj->name."</h2>";
@@ -26,7 +25,7 @@
 
 
 
-	*/?>
+	?>
 
 		</div>
 	</section>

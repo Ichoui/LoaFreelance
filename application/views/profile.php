@@ -26,7 +26,7 @@
 	<section class="user-profil container">
 		<div class="row">
 			<div class="left col  col-md-4">
-				<img src="https://gitlab.com/uploads/-/system/user/avatar/3073155/avatar.png?width=400">
+				<img src="https://preprod-anie.jump-biz.com//media/avatars/clipart/avatar10.jpg">
 			</div>
 			<div class="right col-md-6">
 				<div class="identity">

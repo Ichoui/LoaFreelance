@@ -26,7 +26,7 @@
 			</ul>
 			<div class="nav navbar-nav navbar-right">
 				<a class="nav-link" href="<?= base_url('profile') ?>"><img
-						src="https://gitlab.com/uploads/-/system/user/avatar/3073155/avatar.png?width=400"
+						src="https://preprod-anie.jump-biz.com//media/avatars/clipart/avatar10.jpg"
 						alt="ImageGoogle"></a>
 			</div>
 		</div>
