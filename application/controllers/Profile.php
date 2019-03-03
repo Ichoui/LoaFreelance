@@ -8,7 +8,7 @@ public function __construct(){
 		 parent::__construct();
 		 $this->load->helper('url');
      $this->load->model('formation');
-		$this->load->model('project');
+		 $this->load->model('project');
 	}
 	public function index()
 	{
@@ -24,6 +24,11 @@ public function __construct(){
 		];
 
 		$this->load->view('profile',$data);
+
+	}
+
+	public function hourlyrate()
+	{
 
 	}
 }

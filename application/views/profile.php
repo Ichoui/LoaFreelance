@@ -35,7 +35,7 @@
 						<p class="prenom"><span>Prénom : </span><?= $currentUser['first_name'] ?></p>
 					</div>
 					<hr>
-					<p class="job"><span>Métier </span> <?= ' ' ?></p>
+					<p class="job"><span>Métier </span> <?= $currentUser['job'] ?></p>
 					<p class="tarif"><span>Tarif/horaire :</span> <?= $currentUser['hourly_rate'] ?: 'not_set'; ?> €/h</p>
 					<p class="skill"><span>Compétences :</span>
 						<?php $skills = explode(';', $currentUser['skills']); ?>
@@ -80,7 +80,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<form id="form-tarif" action="" method="post" class="form-group">
+						<?= form_open('profile/hourlyrate'); ?>
 							<div class="form-group">
 								<label for="tarif">Tarif/horaire</label>
 								<input type="number" step="0.5" class="form-control" id="tarif" placeholder="Votre tarif/horaire ...">
