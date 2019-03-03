@@ -177,7 +177,7 @@
 				<div class="projet">
 					<h2 class="nom-projet">'.$project->name.'</h2>
 					<p>'.$project->description.'</p>
-					<a href="<?= base_url(\'projet\') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
+					<a href="'.base_url('projet/getProject/'.$project->id).'" class="btn btn-outline-primary" target="_blank">Accéder</a>
 				</div>';
 			}
 			?>

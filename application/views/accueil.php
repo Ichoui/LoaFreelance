@@ -2,7 +2,7 @@
 <?php $this->load->view('shared/menu'); ?>
 
 
-<body >
+<body style="overflow: auto !important;">
 <main class="page accueil">
 	<section class="clean-block clean-hero">
 		<div class="container-text">
@@ -17,7 +17,8 @@
 					foreach ($last_project as $a_projet) {
 						echo'
 						<li>
-							<a href="'.base_url('projet').'">'.$a_projet->name.' - <span>'.$a_projet->description.' | Compétences : '.$a_projet->contrainte_tech
+							<a href="'.base_url('projet/getProject/'.$a_projet->id).'">'.$a_projet->name.' - <span>'.$a_projet->description.' | Compétences : '
+							.$a_projet->contrainte_tech
 							.'</span></a>
 						</li>
 						';
