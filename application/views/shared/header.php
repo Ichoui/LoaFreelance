@@ -18,6 +18,5 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
 	<link rel="icon" href="<?= base_url('assets/img/Logo_Favicon.jpg') ?>">
-
 </head>
 
