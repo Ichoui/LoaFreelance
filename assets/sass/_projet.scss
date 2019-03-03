@@ -112,16 +112,21 @@
   // ETATS
   .projet {
 	.etat {
-		font-size: .8em;
+	  font-size: .8em;
+	  font-weight: bold;
+	  text-align: right;
 	}
 	&.running .etat:before {
-	  content: 'En cours'
+	  content: 'En cours de développement';
+	  color: $orange;
 	}
 	&.in_search .etat:before {
-	  content: 'Recherche du monde'
+	  content: 'En recherche de monde';
+	  color: green;
 	}
 	&.closed .etat:before {
-	  content: 'Terminé'
+	  content: 'Terminé';
+	  color: red;
 	}
   }
 }

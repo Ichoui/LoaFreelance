@@ -45,6 +45,12 @@
 			}
 			?>
 
+			<?php
+			if ($statut === "CLOSED") {
+				echo '<div class="orange">Ce projet est actuellement indiqué comme terminé et livré.</div>';
+			}
+			?>
+
 			<!-- Accessible pour le freelanceur non inscrit-->
 			<?php
 			if ($_SESSION['id'] != $lePorteurDuProjet) {
@@ -130,7 +136,7 @@
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-outline-primary">Lancer Projet</button>
+                    <button type="submit" class="btn btn-outline-primary" id="launch-projet-modal">Lancer Projet</button>
                     </form>
                  </div>
               </div>
@@ -181,7 +187,7 @@
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-outline-primary">Cloturer le projet</button>
+                    <button type="submit" class="btn btn-outline-primary" id="cloturer-projet">Cloturer le projet</button>
                     </form>
                  </div>
               </div>
@@ -422,6 +428,11 @@
 		);
 
 	});
+
+	$('#launch-projet-modal, #cloturer-projet').on('click', function () {
+		location.reload();
+	});
+
 </script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <script>

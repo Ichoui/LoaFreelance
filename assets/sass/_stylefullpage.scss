@@ -15,6 +15,10 @@ main:not(.index) {
   position: unset;
 }
 
+.orange {
+  color:$orange;
+}
+
 .btn-outline-primary {
   color: white;
   background-color: $orange;
