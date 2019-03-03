@@ -21,7 +21,7 @@ class Projet extends CI_Controller
 	public function index()
 	{
 		$this->load->helper('url');
-		
+
 	}
 	*/
 	public function addNewValidateCandidateFreelanceur()
@@ -35,26 +35,26 @@ class Projet extends CI_Controller
 		$postData = $_POST['allJalons'];
 		$jalons = explode(";", $postData);
 		$jalons_1 = array_filter($jalons);
-		
-		
+
+
 		$sizeJalons = count($jalons_1);
 		$i = 1;
 		for($i = 0; $i < $sizeJalons ; $i = $i+3)
 		{
-			$this->jalon->AddJalon($jalons_1[$i],$jalons_1[$i + 1],$jalons_1[$i + 2],"UNPAYED",2);
+			$this->jalon->AddJalon($jalons_1[$i],$jalons_1[$i + 1],$jalons_1[$i + 2],"UNPAYED", $_POST['id_project']);
 		}
-		$this->project->updateStatutProject($_POST['id_project']);	
+		$this->project->updateStatutProject($_POST['id_project']);
 	}
 
 
 	public function ClotureProjet()
 	{
-		
+
 		$postData = $_POST['allNotations'];
 		$jalons = explode(";", $postData);
 		$jalons_1 = array_filter($jalons);
-		
-		
+
+
 		$sizeJalons = count($jalons_1);
 		$i = 1;
 		for($i = 0; $i < $sizeJalons ; $i = $i+3)
@@ -74,7 +74,7 @@ class Projet extends CI_Controller
 
 			$data = array();
 			$currentUser = $this->session->userdata();
-			$project = $this->project->getProjectById($id);			
+			$project = $this->project->getProjectById($id);
 
 			if($project->num_rows() > 0)
 			{
@@ -96,7 +96,7 @@ class Projet extends CI_Controller
 					$data['first_name'] = $a_porteur_projet->first_name;
 					$data['last_name'] = $a_porteur_projet->last_name;
 					$data['email'] = $a_porteur_projet->intern_email;
-				}				
+				}
 					$data['freelancer_inscrit'] = $this->candidate_project->getFreelancersInscritSurUnProjetByIdProjet($data['id_project']);
 
 					$data['freelanceur_candidate'] = $this->candidate_project->getFreelancersCandidateSurUnProjetByIdProjet($data['id_project']);
@@ -107,7 +107,7 @@ class Projet extends CI_Controller
 			{
 				//a voir
 			}
-			
+
 		$this->load->view('projet',$data);
 	}
 }
