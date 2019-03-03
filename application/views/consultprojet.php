@@ -10,22 +10,8 @@
 				<input type="text" name="search_text" id="search_text" placeholder="Rechercher un projet #KeyWord" class="form-control"/>
 			</div>
 		</div>
-		<!--Fin barre de recherche -->
 		<div class="consult-projet">
-			<!-- Boucle affichage des projets-->
-
-			<?php
-			foreach ($project as $prj) {
-				echo "<div class=\"projet\">";
-				echo "<h2 class=\"nom-projet\">" . $prj->name . "</h2>";
-				echo "<p>" . $prj->description . "</p>";
-				echo "<a href=\"<?= base_url('projet/getProject') ?>\" class=\"btn btn-outline-primary\" target=\"_blank\">Accéder</a>";
-				echo "</div>";
-			}
-
-
-			?>
-
+			<!-- Boucle affichage des projets renvoyée par le controller et affichée via rq ajax par javascript-->
 		</div>
 	</section>
 

@@ -141,7 +141,7 @@
 					if ($statut != "CLOSED") {
 						echo '
         <!-- Large modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-close-project">Clôturer le projet</button>
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-close-project">Clôturer le projet</button>
         ';
 					}
 					echo '
@@ -181,7 +181,7 @@
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Cloturer le projet</button>
+                    <button type="submit" class="btn btn-outline-primary">Cloturer le projet</button>
                     </form>
                  </div>
               </div>
@@ -200,7 +200,10 @@
 	$(document).ready(function () {
 		var idBtn = 1;
 		$('#add_jalon').on('click', function (e) {
-			$('#form_jalon').append('<div class="row" id="row_' + idBtn + '"><div class="col"><input type="textarea" class="form-control" placeholder="Libelle Jalon"></div><div id="2" class="col"><input type="date" class="form-control"></div><div id="3" class="col"><input type="text" class="form-control" placeholder="Coût 0€00"></div><div id="4" class="col"><button type="button" id="btnid_' + idBtn + '" class="btn btn-primary btn_delete_row_ok">x</button></div></div><hr id="ligne_' + idBtn + '">');
+			$('#form_jalon').append('<div class="row" id="row_' + idBtn + '"><div class="col"><input type="textarea" class="form-control" ' +
+				'placeholder="Libelle Jalon"></div><div id="2" class="col"><input type="date" class="form-control"></div><div id="3" class="col"><input ' +
+				'type="text" class="form-control" placeholder="Coût 0€00"></div><div id="4" class="col"><button type="button" id="btnid_' + idBtn + '" ' +
+				'class="btn btn-outline-primary btn_delete_row_ok">x</button></div></div><hr id="ligne_' + idBtn + '">');
 
 			idBtn = idBtn + 1;
 		});

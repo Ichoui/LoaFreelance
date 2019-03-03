@@ -108,4 +108,20 @@
 	  margin-top: 10px;
 	}
   }
+
+  // ETATS
+  .projet {
+	.etat {
+		font-size: .8em;
+	}
+	&.running .etat:before {
+	  content: 'En cours'
+	}
+	&.in_search .etat:before {
+	  content: 'Recherche du monde'
+	}
+	&.closed .etat:before {
+	  content: 'Terminé'
+	}
+  }
 }
