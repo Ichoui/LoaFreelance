@@ -108,4 +108,25 @@
 	  margin-top: 10px;
 	}
   }
+
+  // ETATS
+  .projet {
+	.etat {
+	  font-size: .8em;
+	  font-weight: bold;
+	  text-align: right;
+	}
+	&.running .etat:before {
+	  content: 'En cours de développement';
+	  color: $orange;
+	}
+	&.in_search .etat:before {
+	  content: 'En recherche de monde';
+	  color: green;
+	}
+	&.closed .etat:before {
+	  content: 'Terminé';
+	  color: red;
+	}
+  }
 }

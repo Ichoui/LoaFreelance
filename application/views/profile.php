@@ -177,7 +177,7 @@
 				<div class="projet">
 					<h2 class="nom-projet">'.$project->name.'</h2>
 					<p>'.$project->description.'</p>
-					<a href="<?= base_url(\'projet\') ?>" class="btn btn-outline-primary" target="_blank">Accéder</a>
+					<a href="'.base_url('projet/getProject/'.$project->id).'" class="btn btn-outline-primary" target="_blank">Accéder</a>
 				</div>';
 			}
 			?>
@@ -187,7 +187,3 @@
 
 <?php $this->load->view('shared/chat-window'); ?>
 <?php $this->load->view('shared/footer'); ?>
-
-<!--
- Quand on a le statut de recruteur, on ne peut voir que la partie haute ainsi que le portfollio des réalisations.
- -->

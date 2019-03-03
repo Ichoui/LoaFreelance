@@ -2,7 +2,7 @@
 <?php $this->load->view('shared/menu'); ?>
 
 
-<body >
+<body style="overflow: auto !important;">
 <main class="page accueil">
 	<section class="clean-block clean-hero">
 		<div class="container-text">
@@ -13,15 +13,19 @@
 
 			<ul class="point-interet">
 				<?php
-
+				if (count($last_project) === 0) {
+					echo 'Il n\'y a actuellement aucun projet disponible.';
+				} else {
 					foreach ($last_project as $a_projet) {
-						echo'
+						echo '
 						<li>
-							<a href="'.base_url('projet').'">'.$a_projet->name.' - <span>'.$a_projet->description.' | Compétences : '.$a_projet->contrainte_tech
-							.'</span></a>
+							<a href="' . base_url('projet/getProject/' . $a_projet->id) . '">' . $a_projet->name . ' - <span>' . $a_projet->description . ' | Compétences : '
+							. $a_projet->contrainte_tech
+							. '</span></a>
 						</li>
 						';
 					}
+				}
 				?>
 			</ul>
 			<a class="btn btn-outline-primary btn-lg" role="button" href="<?= base_url('consultprojet') ?>">Chercher un projet</a>

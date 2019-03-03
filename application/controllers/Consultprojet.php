@@ -35,10 +35,10 @@ class Consultprojet extends CI_Controller
 		{
 			foreach ($project_result->result() as $row) {
 				$output .= '
-				<div id ="'.$row->id.'"class="projet">
+				<div id ="'.$row->id.'" class="projet '. strtolower($row->statut).' ">
 				<h2 class="nom-projet">'.$row->name.'</h2>
 				<p>'.$row->description.'</p>
-
+				<p class="etat"></p>	
 				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Accéder</a>
 				</div>
 				';			

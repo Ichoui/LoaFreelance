@@ -89,7 +89,9 @@ class Projet extends CI_Controller
 
 				$porteur_projet = $this->project->getPorteurDuProjet($data['id_project']);
 
+
 				foreach($porteur_projet->result() as $a_porteur_projet)
+//				die($data['id_project']);
 				{
 					$data['first_name'] = $a_porteur_projet->first_name;
 					$data['last_name'] = $a_porteur_projet->last_name;
@@ -100,8 +102,6 @@ class Projet extends CI_Controller
 					$data['freelanceur_candidate'] = $this->candidate_project->getFreelancersCandidateSurUnProjetByIdProjet($data['id_project']);
 
 					$data['lesJalonsDuProjet'] = $this->jalon->getAllJalonsFromProject($data['id_project']);
-
-			
 			}
 			else
 			{
