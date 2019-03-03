@@ -29,7 +29,6 @@
 			<?php
 			if ($statut != "IN_SEARCH") {
 				if ($statut != "CLOSED") {
-
 					echo '
                     <div>Jalons :</div>
                     <ul class="jalons-list">';
@@ -606,4 +605,3 @@
 		}
 	}, '#paypal-button-container');
 </script>
-<!--visionner un projet-->

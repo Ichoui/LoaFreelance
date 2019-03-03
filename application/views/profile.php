@@ -187,7 +187,3 @@
 
 <?php $this->load->view('shared/chat-window'); ?>
 <?php $this->load->view('shared/footer'); ?>
-
-<!--
- Quand on a le statut de recruteur, on ne peut voir que la partie haute ainsi que le portfollio des réalisations.
- -->

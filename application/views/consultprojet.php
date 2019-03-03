@@ -20,10 +20,7 @@
 <?php $this->load->view('shared/footer'); ?>
 
 
-<!--Une page où on peut rechercher un projet (free)-->
-
-
-<!-- MOVE CALL AJAX & JQUERY -->
+<!--  CALL AJAX & JQUERY -->
 <script>
 	$(document).ready(function () {
 
