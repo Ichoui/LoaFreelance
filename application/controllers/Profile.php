@@ -8,8 +8,10 @@ class Profile extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->helper('form');
 		$this->load->model('formation');
 		$this->load->model('project');
+		$this->load->model('user');
 	}
 
 	public function index()
@@ -20,7 +22,7 @@ class Profile extends CI_Controller
 			redirect('login');
 
 		$data = [
-			'currentUser' => $this->session->userdata(),
+			'currentUser' => $currentUser,
 			'allProject' => $this->project->getProjectByUserId($currentUser['id']),
 			'formations' => $this->formation->getByUserId($currentUser['id']),
 		];
@@ -29,8 +31,15 @@ class Profile extends CI_Controller
 
 	}
 
-	public function hourlyrate()
+	public function update()
 	{
+		$currentUser = $this->session->userdata();
 
+		$update = $this->user->update($currentUser['id'], $this->input->post(NULL, TRUE)); // returns all POST items with XSS filter
+		$test = $this->input->post(NULL, TRUE);
+		foreach ($test as $key => $value) {
+			var_dump($key);
+
+		}
 	}
 }

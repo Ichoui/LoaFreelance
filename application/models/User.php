@@ -74,9 +74,13 @@ class User extends CI_Model
 
   public function getAllFree()
   {
-	  $query = $this->db->get_where('users');
+	  $query = $this->db->get_where('users',array('users.isPorteurProjet' => 0));
 	  return $query->result();
 
   }
 
+  public function update($id, $data) {
+    $this->db->where('id', $id);
+    return $this->db->update('users', $data);
+  }
 }

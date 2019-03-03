@@ -80,10 +80,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<?= form_open('profile/hourlyrate'); ?>
+						<?= form_open('profile/update'); ?>
 							<div class="form-group">
 								<label for="tarif">Tarif/horaire</label>
-								<input type="number" step="0.5" class="form-control" id="tarif" placeholder="Votre tarif/horaire ...">
+								<input type="number" step="0.5" class="form-control" name="hourly_rate" id="tarif" placeholder="Votre tarif/horaire ...">
 								<button type="submit" class="btn btn-outline-primary"></button>
 								<small class="form-text text-muted">Exprimé en € /h</small>
 							</div>
