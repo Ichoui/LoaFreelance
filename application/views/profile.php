@@ -97,7 +97,7 @@
 								<select class="form-control" name="job" id="job">
 									<option>Développeur</option>
 									<option>Cuisinier</option>
-									<option>Daesh</option>
+									<option>Testeur</option>
 									<option>Danseur-étoile</option>
 								</select>
 								<button type="submit" class="btn btn-outline-primary"></button>
@@ -108,15 +108,16 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<?= form_open('profile/update'); ?>
+						<form id="form-skill" action="" method="post" class="form-group">
 							<div class="form-group">
-								<label for="cv">Curriculum Vitae</label>
-								<input type="file" class="form-control" id="cv" name="link	" accept="application/pdf">
+								<label for="skills">Compétences</label>
+								<input type="text" class="form-control" id="skills" placeholder="Vos compétences ...">
 								<button type="submit" class="btn btn-outline-primary"></button>
-								<small class="form-text text-muted">Uploadez votre CV (format PDF)</small>
+								<small class="form-text text-muted">Vos compétences acquises</small>
 							</div>
 						</form>
 					</div>
+
 					<div class="col-md-6">
 						<?= form_open('profile/update'); ?>
 							<div class="form-group">
@@ -135,16 +136,6 @@
 								<input type="text" class="form-control" id="formation" placeholder="Votre formation ...">
 								<button type="submit" class="btn btn-outline-primary"></button>
 								<small class="form-text text-muted">Votre diplôme</small>
-							</div>
-						</form>
-					</div>
-					<div class="col-md-6">
-						<form id="form-skill" action="" method="post" class="form-group">
-							<div class="form-group">
-								<label for="skills">Compétences</label>
-								<input type="text" class="form-control" id="skills" placeholder="Vos compétences ...">
-								<button type="submit" class="btn btn-outline-primary"></button>
-								<small class="form-text text-muted">Vos compétences acquises</small>
 							</div>
 						</form>
 					</div>

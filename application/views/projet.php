@@ -7,6 +7,14 @@
 			<div class="description"><span>Description : </span><?php echo $description; ?>
 			</div>
 			<div class="proprietaire"><span>Porteur du projet : </span><?php echo $last_name . ' ' . $first_name; ?></div>
+			<div class="free skills">
+				<span>Compétence(s) requise(s) : </span>
+				<ul>
+					<?php
+					echo $contrainte_tech;
+					?>
+				</ul>
+			</div>
 			<div class="free">
 				<span>Freelanceur(s) inscrits :</span>
 				<ul>
@@ -20,6 +28,9 @@
 								}
 								echo '<li>' . $a_freelanceur->first_name . ' ' . $a_freelanceur->last_name . '</li>';
 							}
+						} else {
+							echo 'Aucun Freelanceur n\'est actuellement inscrit sur ce projet';
+
 						}
 					}
 					?>
@@ -83,8 +94,7 @@
                               <div></div>
                               <form id="' . $a_freelanceur_c->id_user . '_' . $id_project . '_validate" class="form_accepte_free" method="post">';
 							echo '
-                              <div class="avis">Avis : {5} <img src="<?= base_url(\'/assets/img/star.svg\') ?>">
-                              </div>
+               
                               <!-- Seulement pour un porteur de projet-->
                               <!--<a class="btn btn-outline-primary">Accepter</a>-->';
 							$btn_submit = array(
