@@ -94,8 +94,7 @@
                               <div></div>
                               <form id="' . $a_freelanceur_c->id_user . '_' . $id_project . '_validate" class="form_accepte_free" method="post">';
 							echo '
-                              <div class="avis">Avis : {5} <img src="<?= base_url(\'/assets/img/star.svg\') ?>">
-                              </div>
+               
                               <!-- Seulement pour un porteur de projet-->
                               <!--<a class="btn btn-outline-primary">Accepter</a>-->';
 							$btn_submit = array(
