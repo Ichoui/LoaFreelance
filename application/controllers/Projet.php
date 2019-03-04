@@ -27,7 +27,6 @@ class Projet extends CI_Controller
 	public function addNewValidateCandidateFreelanceur()
 	{
 		$this->candidate_project->updateStatut($_POST['id_project'], $_POST['id_user']);
-		$this->getProject($_POST['id_project']);
 	}
 
 	public function RunProjetValidateAddJalon()
@@ -67,7 +66,7 @@ class Projet extends CI_Controller
 	public function SendCandidature()
 	{
 		$this->candidate_project->newCandidature($_POST['id_user'],$_POST['id_project'],$_POST['msg']);
-		$this->getProject($_POST['id_project']);
+
 	}
 
 	public function getProject($id){

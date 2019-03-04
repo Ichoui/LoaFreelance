@@ -29,10 +29,10 @@ class Candidate_project extends CI_Model
   }
   public function updateStatut($iduser,$idprojet)
   {
-    $this->db->set('statut', 'VALIDATE');
-    $this->db->where('id_projet', $idprojet);
     $this->db->where('id_user', $iduser);
-    $this->db->update('candidate_project');
+    $this->db->where('id_projet', $idprojet);
+
+    $this->db->update('candidate_project', ['statut' => 'VALIDATE']);
   }
   public function getFreelancersInscritSurUnProjetByIdProjet($id)
   {
