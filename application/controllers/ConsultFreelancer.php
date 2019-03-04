@@ -39,7 +39,7 @@ class Consultfreelancer extends CI_Controller
 				<h2 class="nom-projet">'.$row->first_name.' '.$row->last_name.'</h2>
 				<p style="text-overflow: ellipsis; overflow: hidden; font-size: .8em; text-align: center">'.$row->intern_email.'</p>
 				<p><b>Location :</b> '.$row->locale.'</p>
-				<a href="'.base_url('profile/getProfil/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Profil</a>
+				<a href="'.base_url('profile/getProfil/'.$row->id.'').'" class="btn btn-outline-primary">Profil</a>
 				</div>
 				';
 			}

@@ -11,7 +11,7 @@ class Consultprojet extends CI_Controller
 
 	public function index()
 	{
-		
+
 		$data = [
 			'test' => ["popo","plplp"],
 			'project' => $this->project->getProjectBystatut()
@@ -30,7 +30,7 @@ class Consultprojet extends CI_Controller
 		}
 		$project_result = $this->project->fetch_data($query);
 		//var_dump($project_result);
-		
+
 		if($project_result->num_rows() > 0)
 		{
 			foreach ($project_result->result() as $row) {
@@ -38,10 +38,10 @@ class Consultprojet extends CI_Controller
 				<div id ="'.$row->id.'" class="projet '. strtolower($row->statut).' ">
 				<h2 class="nom-projet">'.$row->name.'</h2>
 				<p>'.$row->description.'</p>
-				<p class="etat"></p>	
-				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Accéder</a>
+				<p class="etat"></p>
+				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary">Accéder</a>
 				</div>
-				';			
+				';
 			}
 		}
 		else

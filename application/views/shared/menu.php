@@ -21,7 +21,7 @@
 					<a class="nav-link" href="<?= base_url('messages') ?>" title="Votre boite mail">Messagerie</a>
 				</li>
 				<li class="nav-item" role="presentation">
-					<a class="nav-link" href="<?= base_url('/') ?>" title="Votre profil">DECONNEXION</a>
+					<a class="nav-link" href="<?= base_url('login/disconnect') ?>" title="Votre profil">DECONNEXION</a>
 				</li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">

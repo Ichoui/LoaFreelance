@@ -30,4 +30,9 @@ class Login extends CI_Controller
 
 		redirect('login');
 	}
+
+	public function disconnect() {
+		session_destroy();
+		redirect('/');
+	}
 }

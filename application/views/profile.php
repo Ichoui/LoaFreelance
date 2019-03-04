@@ -75,6 +75,7 @@
 		</div>
 		<hr>
 		<!--	Partie Privée utilisateur doit être log pour modifier -->
+		<?php if($currentUser['id'] == $this->session->userdata('id')): ?>
 		<div class="bottom">
 			<p class="text-center">Mettez à jours vos informations dans les champs ci-dessous</p>
 			<div class="container">
@@ -150,6 +151,7 @@
 				</div>
 			</div>
 		</div>
+	<?php endif;?>
 	</section>
 
 	<!--	 SECTION PORTFOLLIO-->
@@ -177,7 +179,7 @@
 				<div class="projet">
 					<h2 class="nom-projet">'.$project->name.'</h2>
 					<p>'.$project->description.'</p>
-					<a href="'.base_url('projet/getProject/'.$project->id).'" class="btn btn-outline-primary" target="_blank">Accéder</a>
+					<a href="'.base_url('projet/getProject/'.$project->id).'" class="btn btn-outline-primary">Accéder</a>
 				</div>';
 			}
 			?>
