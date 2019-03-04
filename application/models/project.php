@@ -79,7 +79,7 @@ class Project extends CI_Model
 
   public function addProjet($name, $description, $skills)
   {
-    
+
     $data = array(
       'name' => $name,
       'description' => $description,
@@ -87,7 +87,7 @@ class Project extends CI_Model
       'path_cdcf' => '',
       'statut' => 'IN_SEARCH',
       'contrainte_tech' => $skills,
-      'le_porteur_du_projet' => '1'
+      'le_porteur_du_projet' => $this->session->userdata()['id'],
     );
     $this->db->insert('project',$data);
   }

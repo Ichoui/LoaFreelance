@@ -31,12 +31,12 @@ class Messages extends CI_Controller
 			$query = $this->input->post('id');
 		}
 		$message_result = $this->message->getAMessage($query);
-		
-		
+
+
 		if($message_result->num_rows() > 0)
 		{
 			foreach ($message_result->result() as $row) {
-			
+
 			$output = $row;
 
 			}
@@ -45,60 +45,59 @@ class Messages extends CI_Controller
 		{
 			$output .= '<p> Pas de message trouvé</p>';
 		}
-		
+
 		echo json_encode($output);
 	}
-	
+
 
 	public function sendMessage()
 	{
 		$output ='';
-		$error ='<p>';
+		$error ='';
 		$destinataire ='';
 		$title = '';
 		$objet = '';
 		$message = '';
 
 		if($this->input->post('destinataire')){
-			$destinataire = $this->input->post('destinataire');			
-			if($this->input->post('objet'))
-			{
-				$objet = $this->input->post('objet');
-				if($this->input->post('message'))
-				{
-					$message = $this->input->post('message');
-					if($this->input->post('titre'))
-					{
-						$title = $this->input->post('titre');
-						$this->message->sendAMessage($_SESSION['id'],$this->message->getIdUserByEmail($this->input->post('destinataire')),$title,$objet,$message);
-						$error .= "Message envoyé";
-					}
-					else
-					{
-						$error .= "Titre vide";
-					}
-					
-					
-				}
-				else
-				{
-					$error .= "Message vide";
-				}
-
-			}
-			else
-			{
-				 $error .= "Objet manquant";
-			}
+			$destinataire = $this->input->post('destinataire');
 		}
-		else
-		{
+		else {
 			$error .= "Destinataire manquant";
+
 		}
+
+		if($this->input->post('objet'))
+		{
+			$objet = $this->input->post('objet');
+		}
+		else {
+			$error .= "Objet manquant";
+		}
+		if($this->input->post('message'))
+		{
+			$message = $this->input->post('message');
+		}
+		else {
+			$error .= "Message vide";
+		}
+		if($this->input->post('titre'))
+		{
+			$title = $this->input->post('titre');
+		}
+		else {
+			$error .= "Titre vide";
+		}
+		if($error == '')
+		{
+			$this->message->sendAMessage($_SESSION['id'],$this->message->getIdUserByEmail($this->input->post('destinataire')),$title,$objet,$message);
+			$error .= "Message envoyé";
+		}
+
 
 		//echo json_encode($output);
-		echo $error.'</p>';
-		
+		echo '<p>'. $error.'</p>';
+
 	}
 
 

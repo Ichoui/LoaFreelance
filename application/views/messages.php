@@ -13,8 +13,8 @@
 				$date = new DateTime($row->date_send);
 
 				echo '<div id="message_' . $row->id . '" class="mail" data-mail="">
-						 	<div class="expediteur" 
-						 	data-firstname="' . $row->first_name . '" 
+						 	<div class="expediteur"
+						 	data-firstname="' . $row->first_name . '"
 						 	data-lastname="' . $row->last_name . '">
 								' . $row->first_name . ' ' .
 								$row->last_name . ' | ' .
@@ -49,11 +49,10 @@
 		<div class="form-sender dno">
 			<!-- Ecrire un nouveau message à designer :p -->
 			<?php
-			echo form_open('messages/sendMessage');
 			echo '<form id="form_message">';
 			echo '<div id="closeform">Fermer</div>';
 			echo '<div class="form-group">		 ';
-			echo '<input type="email" id="input_email" class="form-control" placeholder="@Destinataire">';
+			echo '<input type="email" id="input_email" name="destinataire" class="form-control" placeholder="@Destinataire">';
 			echo '</div>';
 			echo '<div class="form-group">';
 			echo '<input  type="text" class="form-control" id="input_titre" placeholder="Titre">';
@@ -65,8 +64,7 @@
 			echo ' <textarea class="form-control" rows="5" id="input_message" placeholder="message"></textarea>';
 			echo ' </div>';
 			echo ' <button name="submit" id="btn_send_msg" class="btn btn-outline-primary">Envoyé</button>';
-			echo '</form>';
-			form_close(); ?>
+			echo '</form>'; ?>
 			<div id="statut_send"></div>
 			<!-- Fin du btn -->
 		</div>
@@ -77,45 +75,7 @@
 <!-- MOVE CALL AJAX & JQUERY -->
 
 <script>
-	$(document).ready(function () {
-
-		$('#form_message').submit(function (event) {
-
-			var formData = {
-				'destinataire': $('#input_email').val(),
-				'titre': $('#input_titre').val(),
-				'objet': $('#input_objet').val(),
-				'message': $('#input_message').val()
-			};
-
-			// process the form
-			$.ajax({
-				type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-				url: "<?php echo base_url();?>" + "messages/sendMessage", // the url where we want to POST
-				data: formData, // our data object
-				dataType: 'json', // what type of data do we expect back from the server
-				encode: true
-			})
-			// using the done promise callback
-				.done(function (data) {
-
-					// log data to the console so we can see
-					console.log(data);
-
-					// here we will handle errors and validation messages
-				});
-
-			// stop the form from submitting the normal way and refreshing the page
-			event.preventDefault();
-
-		});
-	});
-	$(function () {
-		$('#form_message').on('submit', function (e) {
-			e.preventDefault();
-			sendFromMessage($('#input_email').val(), $('#input_titre').val(), $('#input_objet').val(), $('#input_message').val());
-		})
-	})
+$(document).ready(function(){
 
 	function sendFromMessage(destinataire, titre, objet, message) {
 		$.ajax({
@@ -180,8 +140,8 @@
 
 	$('#closeform ').on('click', function() {
 		$('.form-sender').addClass('dno');
-	})
+	});
+
+});
 
 </script>
-
-

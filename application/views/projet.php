@@ -106,7 +106,7 @@
         <!-- Large modal -->
         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Démarrer le projet</button>
 
-     
+
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -118,7 +118,7 @@
                  </div>
                  <div class="modal-body">
                     <form id="form_jalon">
-                    
+
                          <div class="row">
                             <div id="1" class="col">
                               <input type="text" class="form-control" placeholder="Libelle Jalon">
@@ -130,8 +130,8 @@
                               <button type="button" class="btn btn-outline-primary">x</button>
                             </div>
                          </div>
-                        
-                  
+
+
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -182,7 +182,7 @@
 							}
 						}
 					}
-					echo '                  
+					echo '
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -584,7 +584,7 @@
 							insurance: '0.01'
 						}
 					},
-					description: 'The payment transaction description.',
+					description: '<?= $description ?>',
 					custom: '90048630024435',
 					//invoice_number: '12345', Insert a unique invoice number
 					payment_options: {
