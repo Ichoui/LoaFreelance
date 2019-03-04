@@ -30,7 +30,6 @@ class Consultfreelancer extends CI_Controller
 			$query = $this->input->post('query');
 		}
 		$freelancer = $this->user->fetch_data($query);
-		//var_dump($freelancer);
 
 		if($freelancer->num_rows() > 0)
 		{

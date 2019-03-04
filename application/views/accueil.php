@@ -38,7 +38,7 @@
 				foreach ($last_free as $free) {
 					echo '
 						<li>
-							<a href="'.base_url('profile').'">'.$free->first_name.' '.$free->last_name.'  <span></a>
+							<a href="'.base_url('profile/getProfil/'.$free->id.'').'">'.$free->first_name.' '.$free->last_name.'  <span></a>
 						</li>
 						';
 				}

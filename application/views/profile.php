@@ -36,7 +36,7 @@
 					</div>
 					<hr>
 					<p class="job"><span>Métier </span> <?= $currentUser['job'] ?></p>
-					<p class="tarif"><span>Tarif/horaire :</span> <?= $currentUser['hourly_rate'] ?: 'not_set'; ?> €/h</p>
+					<p class="tarif"><span>Tarif/horaire :</span> <?= $currentUser['hourly_rate'] ?: 'Non indiqué'; ?> €/h</p>
 					<p class="skill"><span>Compétences :</span>
 						<?php $skills = explode(';', $currentUser['skills']); ?>
 						<?php foreach($skills as $skill): ?>
@@ -50,7 +50,7 @@
 							<?php endforeach; ?>
 						</ul>
 					</p>
-					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>
+<!--					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>-->
 					<p class="description"><span>Description :</span><?= $currentUser['description'] ?></p>
 					<!-- Cas : SI user sur son propre profil OU SI utilisateur qui n'a pas fait de projet avec OU SI utilisateur a déjà noté le profil -->
 					<div class="avis">
@@ -61,14 +61,14 @@
 						<img src="<?= base_url('assets/img/star-empty.svg') ?>">
 						<span class="nb-avis">51 avis</span>
 					</div>
-					<!-- sinon si il peut noter -->
-					<div class="avis">
-						<a id="star-1" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
-						<a id="star-2" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
-						<a id="star-3" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
-						<a id="star-4" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
-						<a id="star-5" href=""><img src="<?= base_url('assets/img/star.svg') ?>"></a>
-					</div>
+<!--					<!-- sinon si il peut noter -->
+<!--					<div class="avis">-->
+<!--						<a id="star-1" href=""><img src="--><?//= base_url('assets/img/star.svg') ?><!--"></a>-->
+<!--						<a id="star-2" href=""><img src="--><?//= base_url('assets/img/star.svg') ?><!--"></a>-->
+<!--						<a id="star-3" href=""><img src="--><?//= base_url('assets/img/star.svg') ?><!--"></a>-->
+<!--						<a id="star-4" href=""><img src="--><?//= base_url('assets/img/star.svg') ?><!--"></a>-->
+<!--						<a id="star-5" href=""><img src="--><?//= base_url('assets/img/star.svg') ?><!--"></a>-->
+<!--					</div>-->
 				</div>
 
 			</div>

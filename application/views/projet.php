@@ -80,6 +80,7 @@
                             <div class="user">
                               <div class="name">' . $a_freelanceur_c->first_name . ' ' . $a_freelanceur_c->last_name . '</div>
                               <div class="tarif">xx € / H</div>
+                              <div></div>
                               <form id="' . $a_freelanceur_c->id_user . '_' . $id_project . '_validate" class="form_accepte_free" method="post">';
 							echo '
                               <div class="avis">Avis : {5} <img src="<?= base_url(\'/assets/img/star.svg\') ?>">
