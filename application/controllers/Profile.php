@@ -37,9 +37,8 @@ class Profile extends CI_Controller
 
 		$update = $this->user->update($currentUser['id'], $this->input->post(NULL, TRUE)); // returns all POST items with XSS filter
 		$test = $this->input->post(NULL, TRUE);
-		foreach ($test as $key => $value) {
-			var_dump($key);
 
-		}
+		$this->session->set_userdata($this->user->get_user_by_id($currentUser['id']));
+		redirect('profile');
 	}
 }

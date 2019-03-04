@@ -35,7 +35,7 @@
 						<p class="prenom"><span>Prénom : </span><?= $currentUser['first_name'] ?></p>
 					</div>
 					<hr>
-					<p class="job"><span>Métier </span> <?= $currentUser['job'] ?></p>
+					<p class="job"><span>Métier : </span> <?= $currentUser['job'] ?></p>
 					<p class="tarif"><span>Tarif/horaire :</span> <?= $currentUser['hourly_rate'] ?: 'not_set'; ?> €/h</p>
 					<p class="skill"><span>Compétences :</span>
 						<?php $skills = explode(';', $currentUser['skills']); ?>
@@ -51,7 +51,7 @@
 						</ul>
 					</p>
 					<p class="cv"><span>Curriculum Vitae :</span> <a href="#" target="_blank">Télécharger</a></p>
-					<p class="description"><span>Description :</span><?= $currentUser['description'] ?></p>
+					<p class="description"><span>Description : </span><?= $currentUser['description'] ?></p>
 					<!-- Cas : SI user sur son propre profil OU SI utilisateur qui n'a pas fait de projet avec OU SI utilisateur a déjà noté le profil -->
 					<div class="avis">
 						<img src="<?= base_url('assets/img/star.svg') ?>">
@@ -90,10 +90,10 @@
 						</form>
 					</div>
 					<div class="col-md-6">
-						<form id="form-job" action="" method="post" class="form-group">
+						<?= form_open('profile/update'); ?>
 							<div class="form-group">
-								<label for="job">Métier</label>
-								<select class="form-control" id="job">
+								<label for="job">Métier </label>
+								<select class="form-control" name="job" id="job">
 									<option>Développeur</option>
 									<option>Cuisinier</option>
 									<option>Daesh</option>
@@ -107,20 +107,20 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<form id="form-cv" action="" method="post" class="form-group">
+						<?= form_open('profile/update'); ?>
 							<div class="form-group">
 								<label for="cv">Curriculum Vitae</label>
-								<input type="file" class="form-control" id="cv" accept="application/pdf">
+								<input type="file" class="form-control" id="cv" name="link	" accept="application/pdf">
 								<button type="submit" class="btn btn-outline-primary"></button>
 								<small class="form-text text-muted">Uploadez votre CV (format PDF)</small>
 							</div>
 						</form>
 					</div>
 					<div class="col-md-6">
-						<form id="form-description" action="" method="post" class="form-group">
+						<?= form_open('profile/update'); ?>
 							<div class="form-group">
 								<label for="description">Description</label>
-								<textarea type="text" class="form-control" id="description" placeholder="Votre description ..."></textarea>
+								<input type="text" class="form-control" name="description" id="description" placeholder="Votre description ...">
 								<button type="submit" class="btn btn-outline-primary"></button>
 							</div>
 						</form>
@@ -128,7 +128,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<form id="form-formation" action="" method="post" class="form-group">
+						<?= form_open('profile/update'); ?>
 							<div class="form-group">
 								<label for="formation">Formation</label>
 								<input type="text" class="form-control" id="formation" placeholder="Votre formation ...">

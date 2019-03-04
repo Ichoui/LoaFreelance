@@ -61,7 +61,8 @@ class Project extends CI_Model
   	{
 	   $this->db->like('name', $query);
 	   $this->db->or_like('description', $query);
-	   $this->db->or_like('date_creation', $query);
+     $this->db->or_like('date_creation', $query);
+	   $this->db->or_like('contrainte_tech', $query);
   	}
   	//$this->db->order_by('date_creation','DESC');
   	return $this->db->get();

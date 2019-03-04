@@ -67,6 +67,7 @@ class User extends CI_Model
      $this->db->or_like('email', $query);
      $this->db->or_like('intern_email', $query);
      $this->db->or_like('locale', $query);
+     $this->db->or_like('skills', $query);
     }
     //$this->db->order_by('date_creation','DESC');
     return $this->db->get_where('users',array('users.isPorteurProjet' => 0));

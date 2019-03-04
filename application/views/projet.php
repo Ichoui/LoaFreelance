@@ -119,19 +119,6 @@
                  <div class="modal-body">
                     <form id="form_jalon">
 
-                         <div class="row">
-                            <div id="1" class="col">
-                              <input type="text" class="form-control" placeholder="Libelle Jalon">
-                            </div>
-                            <div id="2" class="col">
-                              <input type="date" class="form-control">
-                            </div>
-                            <div id="3" class="col">
-                              <button type="button" class="btn btn-outline-primary">x</button>
-                            </div>
-                         </div>
-
-
                  </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
