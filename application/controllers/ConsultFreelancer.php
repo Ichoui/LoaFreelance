@@ -12,7 +12,7 @@ class Consultfreelancer extends CI_Controller
 
 	public function index()
 	{
-		
+
 		$data = [
 			'test' => ["popo","plplp"]
 			//'project' => $this->project->getProjectBystatut()
@@ -31,7 +31,7 @@ class Consultfreelancer extends CI_Controller
 		}
 		$freelancer = $this->user->fetch_data($query);
 		//var_dump($freelancer);
-		
+
 		if($freelancer->num_rows() > 0)
 		{
 			foreach ($freelancer->result() as $row) {
@@ -39,16 +39,15 @@ class Consultfreelancer extends CI_Controller
 				<div id ="'.$row->id.'"class="projet">
 				<h2 class="nom-projet">'.$row->first_name.' '.$row->last_name.'</h2>
 				<p style="text-overflow: ellipsis; overflow: hidden; font-size: .8em; text-align: center">'.$row->intern_email.'</p>
-				<p>'.$row->locale.'</p>
-
-				<a href="'.base_url('projet/getProject/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Profil</a>
+				<p><b>Location :</b> '.$row->locale.'</p>
+				<a href="'.base_url('profile/getProfil/'.$row->id.'').'" class="btn btn-outline-primary" target="_blank">Profil</a>
 				</div>
-				';			
+				';
 			}
 		}
 		else
 		{
-			$output .= '<p> Pas d\' de freelancer trouvé</p>';
+			$output .= '<p> Pas de freelancer trouvé</p>';
 		}
 		echo $output;
 	}

@@ -42,4 +42,16 @@ class Profile extends CI_Controller
 
 		}
 	}
+
+	public function getProfil($id)
+	{
+		$currentUser = $this->user->get_user_by_id($id);
+
+		$this->load->view('profile', [
+			'currentUser' => $currentUser,
+			'allProject' => $this->project->getProjectByUserId($currentUser['id']),
+			'formations' => $this->formation->getByUserId($currentUser['id']),
+		]);
+
+	}
 }
