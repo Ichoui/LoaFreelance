@@ -85,6 +85,7 @@ class Projet extends CI_Controller
 					$data['date_creation'] = $a_project->date_creation;
 					$data['lePorteurDuProjet'] = $a_project->le_porteur_du_projet;
 					$data['statut'] = $a_project->statut;
+					$data['contrainte_tech'] = $a_project->contrainte_tech;
 				}
 
 				$porteur_projet = $this->project->getPorteurDuProjet($data['id_project']);
@@ -96,6 +97,7 @@ class Projet extends CI_Controller
 					$data['first_name'] = $a_porteur_projet->first_name;
 					$data['last_name'] = $a_porteur_projet->last_name;
 					$data['email'] = $a_porteur_projet->intern_email;
+
 				}
 					$data['freelancer_inscrit'] = $this->candidate_project->getFreelancersInscritSurUnProjetByIdProjet($data['id_project']);
 

@@ -7,6 +7,14 @@
 			<div class="description"><span>Description : </span><?php echo $description; ?>
 			</div>
 			<div class="proprietaire"><span>Porteur du projet : </span><?php echo $last_name . ' ' . $first_name; ?></div>
+			<div class="free skills">
+				<span>Compétence(s) requise(s) : </span>
+				<ul>
+					<?php
+					echo $contrainte_tech;
+					?>
+				</ul>
+			</div>
 			<div class="free">
 				<span>Freelanceur(s) inscrits :</span>
 				<ul>
@@ -20,6 +28,9 @@
 								}
 								echo '<li>' . $a_freelanceur->first_name . ' ' . $a_freelanceur->last_name . '</li>';
 							}
+						} else {
+							echo 'Aucun Freelanceur n\'est actuellement inscrit sur ce projet';
+
 						}
 					}
 					?>
